@@ -15,7 +15,7 @@
   --text: #555866;
   --nav: #6F6A4A;
 
-  --stars: rgba(231, 190, 72, 0.42);
+  --stars: rgba(161, 133, 50, 0.42)
 }
 
 
@@ -339,7 +339,7 @@ h3 {
 
   opacity: 0.88;
 
- margin-top: 16px;
+ margin-top: 22px;
 }
 
 
@@ -353,7 +353,7 @@ h3 {
 .page-design-documentation h1 + p {
   color: var(--green);
 
-  font-size: 17px;
+  font-size: 18px;
 
   opacity: 0.88;
 
@@ -369,7 +369,7 @@ p,
 li {
   color: var(--text);
 
-  font-size: 16px;
+  font-size: 17px;
 }
 
 p {
@@ -501,7 +501,7 @@ main::after {
 
   white-space: nowrap;
 
-  content: "✦   ✧   ˚   ⋆";
+  content: "✮   ✧   ˚  ⋆˙";
 
   filter: blur(0.2px);
 }
