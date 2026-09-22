@@ -1,7 +1,3 @@
-/* =========================================
-   SANJIDAH'S FALL 2026 DESIGN DOCUMENTATION
-   ========================================= */
-
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap');
 
 
@@ -11,21 +7,12 @@
 
 :root {
   --yellow: #FDFBD4;
-
-  --olive: #BDB96A;
-
-  --lavender: #C1BFFF;
-
-  --purple: #CF6DFC;
+  --green: #BDB96A;
 
   --deep-purple: #66507F;
-
-  --name-color: #51405F;
+  --light-purple: #8A74A2;
 
   --text: #555866;
-
-  --subheading: #77734D;
-
   --nav: #6F6A4A;
 
   --stars: rgba(255, 255, 255, 0.50);
@@ -46,7 +33,6 @@ html {
 
 body {
   margin: 0;
-
   min-height: 100vh;
 
   color: var(--text);
@@ -60,58 +46,76 @@ body {
   position: relative;
 
   display: flex;
-
   flex-direction: column;
 }
 
 
 /* =========================================
-   PAGE BACKGROUNDS
+   AURA BACKGROUNDS
    ========================================= */
 
-/* HOME */
+/* HOME
+   Soft yellow aura */
 
 .page-home {
-  background: var(--yellow);
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(255, 255, 255, 0.48) 0%,
+      rgba(255, 255, 255, 0.20) 22%,
+      transparent 52%
+    ),
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(255, 245, 170, 0.30) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(189, 185, 106, 0.13) 0%,
+      transparent 45%
+    ),
+    #FDFBD4;
 }
 
 
 /* ABOUT ME
-   Yellow → soft lavender → purple */
+   Yellow with a soft purple aura */
 
 .page-about-me {
   background:
     radial-gradient(
-      ellipse at 100% 100%,
-      rgba(207, 109, 252, 0.18),
+      circle at 80% 75%,
+      rgba(207, 109, 252, 0.18) 0%,
+      rgba(193, 191, 255, 0.16) 25%,
       transparent 58%
     ),
-    linear-gradient(
-      135deg,
-      #FDFBD4 0%,
-      rgba(253, 251, 212, 0.95) 35%,
-      rgba(193, 191, 255, 0.30) 72%,
-      rgba(207, 109, 252, 0.18) 100%
-    );
+    radial-gradient(
+      circle at 20% 25%,
+      rgba(255, 255, 255, 0.30) 0%,
+      transparent 50%
+    ),
+    #FDFBD4;
 }
 
 
 /* DESIGN DOCUMENTATION
-   Yellow → lavender */
+   Yellow with a lavender aura */
 
 .page-design-documentation {
   background:
     radial-gradient(
-      ellipse at 100% 100%,
-      rgba(193, 191, 255, 0.30),
-      transparent 62%
+      circle at 80% 75%,
+      rgba(193, 191, 255, 0.25) 0%,
+      rgba(207, 109, 252, 0.10) 28%,
+      transparent 60%
     ),
-    linear-gradient(
-      135deg,
-      #FDFBD4 0%,
-      rgba(253, 251, 212, 0.96) 42%,
-      rgba(193, 191, 255, 0.28) 100%
-    );
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 255, 255, 0.32) 0%,
+      transparent 48%
+    ),
+    #FDFBD4;
 }
 
 
@@ -121,7 +125,6 @@ body {
 
 nav {
   position: relative;
-
   z-index: 20;
 
   width: 100%;
@@ -164,7 +167,7 @@ nav a:hover {
 
 
 /* =========================================
-   MAIN CONTENT
+   MAIN
    ========================================= */
 
 main {
@@ -183,7 +186,7 @@ main {
 
 
 /* =========================================
-   TITLES
+   ALL TITLES
    ========================================= */
 
 h1,
@@ -192,16 +195,16 @@ h3 {
   font-family: "DM Serif Display", Georgia, serif;
 
   font-weight: 400;
+
+  color: var(--deep-purple);
 }
 
 
 /* =========================================
-   MAIN TITLES
+   MAIN TITLE
    ========================================= */
 
 h1 {
-  color: var(--name-color);
-
   font-size: clamp(56px, 8vw, 92px);
 
   line-height: 0.98;
@@ -212,28 +215,12 @@ h1 {
 }
 
 
-/* About Me title */
-
-.page-about-me h1 {
-  color: var(--deep-purple);
-}
-
-
-/* Design Documentation title */
-
-.page-design-documentation h1 {
-  color: var(--deep-purple);
-
-  font-size: clamp(46px, 6.5vw, 72px);
-}
-
-
 /* =========================================
-   SUBHEADINGS
+   PROJECT HEADINGS
    ========================================= */
 
 h2 {
-  color: var(--subheading);
+  color: var(--light-purple);
 
   font-size: clamp(36px, 5vw, 54px);
 
@@ -245,11 +232,37 @@ h2 {
 }
 
 h3 {
-  color: var(--subheading);
+  color: var(--light-purple);
 
   font-size: 28px;
 
   margin-top: 45px;
+}
+
+
+/* =========================================
+   DESIGN DOCUMENTATION TITLE
+   ========================================= */
+
+.page-design-documentation h1 {
+  color: var(--deep-purple);
+
+  /*
+    Bigger than before, but constrained
+    so it stays on one line.
+  */
+  font-size: clamp(48px, 6vw, 78px);
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   ABOUT ME TITLE
+   ========================================= */
+
+.page-about-me h1 {
+  color: var(--deep-purple);
 }
 
 
@@ -273,120 +286,76 @@ h3 {
   padding-top: 20px;
 }
 
+
+/* Homepage name */
+
 .page-home h1 {
-  margin-bottom: 12px;
+  color: var(--deep-purple);
 
   cursor: default;
 
-  transition: color 0.3s ease;
+  margin-bottom: 12px;
+
+  display: block;
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
 }
 
+
+/* Slow gentle pulse when cursor is on name */
+
 .page-home h1:hover {
-  color: #5F4770;
+  animation: namePulse 3.5s ease-in-out infinite;
+}
+
+@keyframes namePulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.025);
+    opacity: 0.82;
+  }
+
 }
 
 
 /* Homepage subtitle */
 
 .page-home h1 + p {
-  color: var(--subheading);
+  color: var(--light-purple);
 
   font-size: 17px;
 
   letter-spacing: 0.8px;
 
-  opacity: 0.82;
+  opacity: 0.88;
 }
 
 
 /* =========================================
-   NAME WAVE ANIMATION
+   INTRO / SUBTITLE TEXT
    ========================================= */
 
-.wave-letter {
-  display: inline-block;
+/* About + Design intro */
 
-  transform-origin: bottom center;
-}
+.page-about-me h1 + p,
+.page-design-documentation h1 + p {
+  color: var(--green);
 
-.page-home h1:hover .wave-letter {
-  animation: gentleWave 2.8s ease-in-out infinite;
-}
+  font-size: 17px;
 
+  opacity: 0.88;
 
-/* Slight delay between letters */
-
-.wave-letter:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.wave-letter:nth-child(2) {
-  animation-delay: 0.08s;
-}
-
-.wave-letter:nth-child(3) {
-  animation-delay: 0.16s;
-}
-
-.wave-letter:nth-child(4) {
-  animation-delay: 0.24s;
-}
-
-.wave-letter:nth-child(5) {
-  animation-delay: 0.32s;
-}
-
-.wave-letter:nth-child(6) {
-  animation-delay: 0.40s;
-}
-
-.wave-letter:nth-child(7) {
-  animation-delay: 0.48s;
-}
-
-.wave-letter:nth-child(8) {
-  animation-delay: 0.56s;
-}
-
-.wave-letter:nth-child(9) {
-  animation-delay: 0.64s;
-}
-
-.wave-letter:nth-child(10) {
-  animation-delay: 0.72s;
-}
-
-.wave-letter:nth-child(11) {
-  animation-delay: 0.80s;
-}
-
-.wave-letter:nth-child(12) {
-  animation-delay: 0.88s;
-}
-
-.wave-letter:nth-child(13) {
-  animation-delay: 0.96s;
-}
-
-@keyframes gentleWave {
-
-  0%,
-  100% {
-    transform: rotate(0deg) translateY(0);
-  }
-
-  25% {
-    transform: rotate(-4deg) translateY(-3px);
-  }
-
-  50% {
-    transform: rotate(3deg) translateY(2px);
-  }
-
-  75% {
-    transform: rotate(-2deg) translateY(-2px);
-  }
-
+  max-width: 700px;
 }
 
 
@@ -411,22 +380,6 @@ ul {
   max-width: 720px;
 
   padding-left: 22px;
-}
-
-
-/* About Me regular text */
-
-.page-about-me p,
-.page-about-me li {
-  color: #555866;
-}
-
-
-/* Design Documentation regular text */
-
-.page-design-documentation p,
-.page-design-documentation li {
-  color: #555866;
 }
 
 
@@ -523,7 +476,7 @@ footer span {
 
 
 /* =========================================
-   FLOATING STARS
+   FLOATING AURA STARS
    ========================================= */
 
 body::before,
@@ -542,82 +495,73 @@ main::after {
 
   font-family: Georgia, serif;
 
-  font-size: 30px;
-
   line-height: 1;
 
   white-space: nowrap;
 
   content: "✦   ✧   ˚   ⋆";
+
+  filter: blur(0.2px);
 }
 
 
-/* Top left */
+/* Different sizes and positions */
 
 body::before {
-  top: 15%;
+  top: 12%;
+  left: 7%;
 
-  left: 5%;
+  font-size: 32px;
 
-  opacity: 0.5;
+  opacity: 0.50;
 
-  animation: starFlowOne 18s ease-in-out infinite;
+  animation: auraFloatOne 24s ease-in-out infinite;
 }
 
-
-/* Bottom right */
-
 body::after {
-  right: 5%;
+  right: 7%;
+  bottom: 13%;
 
-  bottom: 15%;
-
-  font-size: 38px;
+  font-size: 40px;
 
   opacity: 0.45;
 
-  animation: starFlowTwo 22s ease-in-out infinite;
+  animation: auraFloatTwo 28s ease-in-out infinite;
 }
 
-
-/* Middle left */
-
 main::before {
-  top: 48%;
+  top: 52%;
+  left: 14%;
 
-  left: 17%;
-
-  font-size: 25px;
+  font-size: 24px;
 
   opacity: 0.38;
 
-  animation: starFlowThree 24s ease-in-out infinite;
+  animation: auraFloatThree 30s ease-in-out infinite;
 }
 
-
-/* Upper right */
-
 main::after {
-  top: 32%;
-
-  right: 15%;
+  top: 27%;
+  right: 13%;
 
   font-size: 28px;
 
   opacity: 0.35;
 
-  animation: starFlowFour 20s ease-in-out infinite;
+  animation: auraFloatFour 26s ease-in-out infinite;
 }
 
 
-@keyframes starFlowOne {
+/* Slow drifting */
+
+@keyframes auraFloatOne {
 
   0% {
     transform: translate(0, 0) rotate(0deg);
   }
 
   50% {
-    transform: translate(45px, 35px) rotate(12deg);
+    transform: translate(45px, 55px) rotate(8deg);
   }
 
   100% {
@@ -626,15 +570,14 @@ main::after {
 
 }
 
-
-@keyframes starFlowTwo {
+@keyframes auraFloatTwo {
 
   0% {
     transform: translate(0, 0);
   }
 
   50% {
-    transform: translate(-50px, -35px);
+    transform: translate(-55px, -45px);
   }
 
   100% {
@@ -643,15 +586,14 @@ main::after {
 
 }
 
-
-@keyframes starFlowThree {
+@keyframes auraFloatThree {
 
   0% {
     transform: translate(0, 0);
   }
 
   50% {
-    transform: translate(30px, -40px);
+    transform: translate(35px, -50px);
   }
 
   100% {
@@ -660,15 +602,14 @@ main::after {
 
 }
 
-
-@keyframes starFlowFour {
+@keyframes auraFloatFour {
 
   0% {
     transform: translate(0, 0);
   }
 
   50% {
-    transform: translate(-35px, 45px);
+    transform: translate(-40px, 45px);
   }
 
   100% {
@@ -772,7 +713,9 @@ code {
   }
 
   .page-design-documentation h1 {
-    font-size: 44px;
+    font-size: 43px;
+
+    white-space: nowrap;
   }
 
   h2 {
