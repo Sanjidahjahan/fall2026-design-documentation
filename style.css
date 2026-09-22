@@ -331,7 +331,7 @@ h3 {
 /* Homepage subtitle */
 
 .page-home h1 + p {
-  color: var(--light-purple);
+  color: var(--green);
 
   font-size: 18px;
 
