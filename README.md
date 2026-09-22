@@ -1,8 +1,8 @@
-# Sanjidah's Fall 2026 Design Documentation
+---
+layout: default
+title: Home
+---
 
-**[Home](index.html)** · **[About Me](about.html)** · **[Design Documentation](documentation.html)**
+# Sanjidah Jahan
 
-Hello! This is my design documentation landing page for Creative Embedded Systems this semester.
-
-- [About Me](about.html)
-- [Design Documentation](documentation.html)
+Fall 2026 Design Documentation
