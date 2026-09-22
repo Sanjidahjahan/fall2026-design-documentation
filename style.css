@@ -7,7 +7,7 @@
 
 :root {
   --yellow: #FDFBD4;
-  --green: #85834F;
+  --green: #69683F;
 
   --deep-purple: #66507F;
   --light-purple: #8A74A2;
@@ -339,7 +339,7 @@ h3 {
 
   opacity: 0.88;
 
- margin-top: 12px;
+ margin-top: 16px;
 }
 
 
