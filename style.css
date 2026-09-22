@@ -99,7 +99,7 @@ body {
 }
 
 
-/* DESIGN DOCUMENTATION
+/* project DOCUMENTATION
    Yellow with a lavender aura */
 
 .page-project-documentation {
@@ -241,10 +241,10 @@ h3 {
 
 
 /* =========================================
-   DESIGN DOCUMENTATION TITLE
+   project DOCUMENTATION TITLE
    ========================================= */
 
-.page-design-documentation h1 {
+.page-project-documentation h1 {
   color: var(--deep-purple);
 
   /*
@@ -347,10 +347,10 @@ h3 {
    INTRO / SUBTITLE TEXT
    ========================================= */
 
-/* About + Design intro */
+/* About + project intro */
 
 .page-about-me h1 + p,
-.page-design-documentation h1 + p {
+.page-project-documentation h1 + p {
   color: var(--green);
 
   font-size: 18px;
@@ -788,7 +788,7 @@ code {
     font-size: 52px;
   }
 
-  .page-design-documentation h1 {
+  .page-project-documentation h1 {
     font-size: 43px;
 
     white-space: nowrap;
