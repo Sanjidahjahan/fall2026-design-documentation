@@ -1,26 +1,34 @@
 /* =========================================
    SANJIDAH'S FALL 2026 DESIGN DOCUMENTATION
-   Dreamy Pastel Palette
    ========================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap');
 
 
 /* =========================================
-   COLOR PALETTE
+   COLORS
    ========================================= */
 
 :root {
   --yellow: #FDFBD4;
+
   --olive: #BDB96A;
+
   --lavender: #C1BFFF;
+
   --purple: #CF6DFC;
 
-  --heading: #666342;
-  --text: #55566B;
-  --nav: #77734D;
+  --deep-purple: #66507F;
 
-  --star: rgba(255, 239, 143, 0.42);
+  --name-color: #51405F;
+
+  --text: #555866;
+
+  --subheading: #77734D;
+
+  --nav: #6F6A4A;
+
+  --stars: rgba(255, 255, 255, 0.50);
 }
 
 
@@ -38,6 +46,7 @@ html {
 
 body {
   margin: 0;
+
   min-height: 100vh;
 
   color: var(--text);
@@ -50,7 +59,9 @@ body {
 
   position: relative;
 
-  transition: background 0.8s ease;
+  display: flex;
+
+  flex-direction: column;
 }
 
 
@@ -66,42 +77,40 @@ body {
 
 
 /* ABOUT ME
-   Yellow slowly fading into olive */
+   Yellow → soft lavender → purple */
 
 .page-about-me {
   background:
     radial-gradient(
       ellipse at 100% 100%,
-      rgba(189, 185, 106, 0.30) 0%,
-      rgba(189, 185, 106, 0.14) 28%,
-      transparent 65%
+      rgba(207, 109, 252, 0.18),
+      transparent 58%
     ),
     linear-gradient(
       135deg,
       #FDFBD4 0%,
-      rgba(253, 251, 212, 0.96) 48%,
-      rgba(189, 185, 106, 0.22) 100%
+      rgba(253, 251, 212, 0.95) 35%,
+      rgba(193, 191, 255, 0.30) 72%,
+      rgba(207, 109, 252, 0.18) 100%
     );
 }
 
 
 /* DESIGN DOCUMENTATION
-   Yellow slowly fading into lavender/purple */
+   Yellow → lavender */
 
 .page-design-documentation {
   background:
     radial-gradient(
       ellipse at 100% 100%,
-      rgba(207, 109, 252, 0.18) 0%,
-      rgba(193, 191, 255, 0.25) 32%,
-      transparent 68%
+      rgba(193, 191, 255, 0.30),
+      transparent 62%
     ),
     linear-gradient(
       135deg,
       #FDFBD4 0%,
-      rgba(253, 251, 212, 0.95) 40%,
-      rgba(193, 191, 255, 0.22) 75%,
-      rgba(207, 109, 252, 0.10) 100%
+      rgba(253, 251, 212, 0.96) 42%,
+      rgba(193, 191, 255, 0.28) 100%
     );
 }
 
@@ -146,7 +155,7 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--olive);
+  color: var(--deep-purple);
 
   opacity: 1;
 
@@ -167,7 +176,9 @@ main {
 
   margin: 0 auto;
 
-  padding: 85px 0 140px;
+  padding: 75px 0 110px;
+
+  flex: 1;
 }
 
 
@@ -181,67 +192,201 @@ h3 {
   font-family: "DM Serif Display", Georgia, serif;
 
   font-weight: 400;
-
-  color: var(--heading);
 }
 
 
+/* =========================================
+   MAIN TITLES
+   ========================================= */
+
 h1 {
-  font-size: clamp(56px, 9vw, 100px);
+  color: var(--name-color);
+
+  font-size: clamp(56px, 8vw, 92px);
 
   line-height: 0.98;
 
   letter-spacing: -1px;
 
-  margin: 0 0 20px;
-
-  max-width: 800px;
+  margin: 0 0 22px;
 }
 
 
+/* About Me title */
+
+.page-about-me h1 {
+  color: var(--name-color);
+}
+
+
+/* Design Documentation title */
+
+.page-design-documentation h1 {
+  color: var(--deep-purple);
+
+  font-size: clamp(46px, 6.5vw, 72px);
+}
+
+
+/* =========================================
+   SUBHEADINGS
+   ========================================= */
+
 h2 {
-  font-size: clamp(38px, 6vw, 58px);
+  color: var(--subheading);
+
+  font-size: clamp(36px, 5vw, 54px);
 
   line-height: 1.05;
 
-  margin-top: 80px;
+  margin-top: 75px;
 
-  margin-bottom: 24px;
-
-  transition:
-    transform 0.4s ease,
-    opacity 0.4s ease;
+  margin-bottom: 22px;
 }
-
-
-h2:hover {
-  transform: translateX(7px);
-
-  opacity: 0.72;
-}
-
 
 h3 {
-  font-size: 30px;
+  color: var(--subheading);
+
+  font-size: 28px;
 
   margin-top: 45px;
 }
 
 
 /* =========================================
-   SUBTITLE / INTRO TEXT
+   HOMEPAGE
    ========================================= */
 
-h1 + p {
-  font-family: "DM Sans", sans-serif;
+.page-home main {
+  display: flex;
 
-  color: var(--heading);
+  flex-direction: column;
 
-  font-size: 18px;
+  align-items: center;
 
-  letter-spacing: 0.5px;
+  justify-content: center;
 
-  opacity: 0.78;
+  text-align: center;
+
+  min-height: calc(100vh - 150px);
+
+  padding-top: 20px;
+}
+
+.page-home h1 {
+  margin-bottom: 12px;
+
+  cursor: default;
+
+  transition: color 0.3s ease;
+}
+
+.page-home h1:hover {
+  color: #5F4770;
+}
+
+
+/* Homepage subtitle */
+
+.page-home h1 + p {
+  color: var(--subheading);
+
+  font-size: 17px;
+
+  letter-spacing: 0.8px;
+
+  opacity: 0.82;
+}
+
+
+/* =========================================
+   NAME WAVE ANIMATION
+   ========================================= */
+
+.wave-letter {
+  display: inline-block;
+
+  transform-origin: bottom center;
+}
+
+.page-home h1:hover .wave-letter {
+  animation: gentleWave 2.8s ease-in-out infinite;
+}
+
+
+/* Slight delay between letters */
+
+.wave-letter:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.wave-letter:nth-child(2) {
+  animation-delay: 0.08s;
+}
+
+.wave-letter:nth-child(3) {
+  animation-delay: 0.16s;
+}
+
+.wave-letter:nth-child(4) {
+  animation-delay: 0.24s;
+}
+
+.wave-letter:nth-child(5) {
+  animation-delay: 0.32s;
+}
+
+.wave-letter:nth-child(6) {
+  animation-delay: 0.40s;
+}
+
+.wave-letter:nth-child(7) {
+  animation-delay: 0.48s;
+}
+
+.wave-letter:nth-child(8) {
+  animation-delay: 0.56s;
+}
+
+.wave-letter:nth-child(9) {
+  animation-delay: 0.64s;
+}
+
+.wave-letter:nth-child(10) {
+  animation-delay: 0.72s;
+}
+
+.wave-letter:nth-child(11) {
+  animation-delay: 0.80s;
+}
+
+.wave-letter:nth-child(12) {
+  animation-delay: 0.88s;
+}
+
+.wave-letter:nth-child(13) {
+  animation-delay: 0.96s;
+}
+
+@keyframes gentleWave {
+
+  0%,
+  100% {
+    transform: rotate(0deg) translateY(0);
+  }
+
+  25% {
+    transform: rotate(-4deg) translateY(-3px);
+  }
+
+  50% {
+    transform: rotate(3deg) translateY(2px);
+  }
+
+  75% {
+    transform: rotate(-2deg) translateY(-2px);
+  }
+
 }
 
 
@@ -256,18 +401,32 @@ li {
   font-size: 16px;
 }
 
-
 p {
   max-width: 720px;
 
   margin-bottom: 24px;
 }
 
-
 ul {
   max-width: 720px;
 
   padding-left: 22px;
+}
+
+
+/* About Me regular text */
+
+.page-about-me p,
+.page-about-me li {
+  color: #555866;
+}
+
+
+/* Design Documentation regular text */
+
+.page-design-documentation p,
+.page-design-documentation li {
+  color: #555866;
 }
 
 
@@ -287,7 +446,6 @@ main a {
     opacity 0.3s ease;
 }
 
-
 main a::after {
   content: "";
 
@@ -301,18 +459,16 @@ main a::after {
 
   height: 1px;
 
-  background: var(--olive);
+  background: var(--deep-purple);
 
   transition: width 0.35s ease;
 }
 
-
 main a:hover {
-  color: var(--olive);
+  color: var(--deep-purple);
 
-  opacity: 0.8;
+  opacity: 0.82;
 }
-
 
 main a:hover::after {
   width: 100%;
@@ -320,14 +476,55 @@ main a:hover::after {
 
 
 /* =========================================
-   FLOATING STARS
+   FOOTER
    ========================================= */
 
-/*
-   Very soft pastel yellow stars.
-   They are intentionally transparent so
-   they sit behind the content.
-*/
+footer {
+  position: relative;
+
+  z-index: 20;
+
+  width: 100%;
+
+  padding: 25px 20px 35px;
+
+  text-align: center;
+
+  font-size: 12px;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+footer a {
+  color: var(--nav);
+
+  text-decoration: none;
+
+  margin: 0 8px;
+
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--deep-purple);
+
+  opacity: 0.8;
+}
+
+footer span {
+  color: var(--nav);
+
+  opacity: 0.5;
+}
+
+
+/* =========================================
+   FLOATING STARS
+   ========================================= */
 
 body::before,
 body::after,
@@ -341,47 +538,45 @@ main::after {
 
   z-index: 1;
 
-  color: var(--star);
+  color: var(--stars);
 
   font-family: Georgia, serif;
 
-  font-size: 28px;
+  font-size: 30px;
 
   line-height: 1;
 
-  opacity: 0.45;
-
-  content: "✦  ✧  ˚  ✦  ⋆";
-
   white-space: nowrap;
+
+  content: "✦   ✧   ˚   ⋆";
 }
 
 
-/* Upper left */
+/* Top left */
 
 body::before {
-  top: 13%;
+  top: 15%;
 
-  left: 4%;
+  left: 5%;
 
-  animation:
-    floatOne 14s ease-in-out infinite;
+  opacity: 0.5;
+
+  animation: starFlowOne 18s ease-in-out infinite;
 }
 
 
-/* Lower right */
+/* Bottom right */
 
 body::after {
-  right: 3%;
+  right: 5%;
 
-  bottom: 16%;
+  bottom: 15%;
 
-  font-size: 34px;
+  font-size: 38px;
 
-  opacity: 0.35;
+  opacity: 0.45;
 
-  animation:
-    floatTwo 17s ease-in-out infinite;
+  animation: starFlowTwo 22s ease-in-out infinite;
 }
 
 
@@ -390,16 +585,13 @@ body::after {
 main::before {
   top: 48%;
 
-  left: 12%;
+  left: 17%;
 
-  position: fixed;
+  font-size: 25px;
 
-  font-size: 22px;
+  opacity: 0.38;
 
-  opacity: 0.28;
-
-  animation:
-    floatThree 19s ease-in-out infinite;
+  animation: starFlowThree 24s ease-in-out infinite;
 }
 
 
@@ -408,27 +600,24 @@ main::before {
 main::after {
   top: 32%;
 
-  right: 10%;
+  right: 15%;
 
-  position: fixed;
+  font-size: 28px;
 
-  font-size: 25px;
+  opacity: 0.35;
 
-  opacity: 0.25;
-
-  animation:
-    floatFour 16s ease-in-out infinite reverse;
+  animation: starFlowFour 20s ease-in-out infinite;
 }
 
 
-@keyframes floatOne {
+@keyframes starFlowOne {
 
   0% {
     transform: translate(0, 0) rotate(0deg);
   }
 
   50% {
-    transform: translate(12px, -25px) rotate(5deg);
+    transform: translate(45px, 35px) rotate(12deg);
   }
 
   100% {
@@ -438,14 +627,14 @@ main::after {
 }
 
 
-@keyframes floatTwo {
+@keyframes starFlowTwo {
 
   0% {
     transform: translate(0, 0);
   }
 
   50% {
-    transform: translate(-18px, -20px);
+    transform: translate(-50px, -35px);
   }
 
   100% {
@@ -455,31 +644,31 @@ main::after {
 }
 
 
-@keyframes floatThree {
-
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(25px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-
-}
-
-
-@keyframes floatFour {
+@keyframes starFlowThree {
 
   0% {
     transform: translate(0, 0);
   }
 
   50% {
-    transform: translate(-15px, 18px);
+    transform: translate(30px, -40px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+
+}
+
+
+@keyframes starFlowFour {
+
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-35px, 45px);
   }
 
   100% {
@@ -511,7 +700,6 @@ img {
     opacity 0.5s ease;
 }
 
-
 img:hover {
   transform: translateY(-6px);
 
@@ -528,7 +716,7 @@ hr {
 
   height: 1px;
 
-  background: rgba(85, 86, 107, 0.14);
+  background: rgba(85, 88, 102, 0.14);
 
   margin: 65px 0;
 }
@@ -572,15 +760,23 @@ code {
   main {
     width: calc(100% - 35px);
 
-    padding-top: 60px;
+    padding-top: 55px;
+  }
+
+  .page-home main {
+    min-height: calc(100vh - 130px);
   }
 
   h1 {
-    font-size: 54px;
+    font-size: 52px;
+  }
+
+  .page-design-documentation h1 {
+    font-size: 44px;
   }
 
   h2 {
-    font-size: 38px;
+    font-size: 37px;
   }
 
   p,
@@ -592,7 +788,7 @@ code {
   body::after,
   main::before,
   main::after {
-    font-size: 20px;
+    font-size: 22px;
   }
 
 }
