@@ -1,4 +1,4 @@
-# Fall 2026 Design Documentation
+# Sanjidah's Fall 2026 Design Documentation
 
 ## About Me
 
