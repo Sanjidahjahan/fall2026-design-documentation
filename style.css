@@ -2,7 +2,7 @@
    SANJIDAH'S DESIGN DOCUMENTATION
    ========================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=DM+Sans:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap');
 
 
 /* =========================================
@@ -10,20 +10,19 @@
    ========================================= */
 
 :root {
-  --cream: #F9E4D6;
-  --tea-rose: #FAD2D3;
-  --lilac: #EBC6CE;
-  --water: #C2E0E0;
-  --sour: #F7BF82;
-  --blue: #4687B7;
+  --water-spray: #C2E0E0;
+  --deep-blue: #385A7C;
+  --tea-rose: #F99192;
+  --pink: #FAD2D3;
+  --pastel-yellow: #F7BF82;
 
   --text: #385A7C;
-  --soft-text: rgba(56, 90, 124, 0.72);
+  --soft-text: rgba(56, 90, 124, 0.78);
 }
 
 
 /* =========================================
-   BASIC RESET
+   RESET
    ========================================= */
 
 * {
@@ -38,18 +37,7 @@ body {
   margin: 0;
   min-height: 100vh;
 
-  background:
-    radial-gradient(
-      circle at 15% 20%,
-      rgba(250, 210, 211, 0.35),
-      transparent 25%
-    ),
-    radial-gradient(
-      circle at 85% 70%,
-      rgba(194, 224, 224, 0.35),
-      transparent 25%
-    ),
-    var(--cream);
+  background: var(--water-spray);
 
   color: var(--text);
 
@@ -69,49 +57,56 @@ body {
 
 body::before,
 body::after {
-  content: "✦  ✧  ⋆  ✦  ˚  ✧";
+  content: "✦     ✧        ⋆     ✦        ✧     ⋆";
+  
   position: fixed;
 
-  color: rgba(70, 135, 183, 0.16);
+  color: rgba(247, 191, 130, 0.35);
 
-  font-size: 18px;
-  letter-spacing: 55px;
-  line-height: 100px;
+  font-size: 27px;
+
+  letter-spacing: 18px;
+
+  white-space: nowrap;
 
   pointer-events: none;
+
   z-index: 0;
 
-  white-space: pre-wrap;
+  user-select: none;
 }
 
 body::before {
-  top: 8%;
-  left: 3%;
+  top: 13%;
+  left: 2%;
 
-  animation: floatStars 12s ease-in-out infinite;
+  animation: floatingStars 13s ease-in-out infinite;
 }
 
 body::after {
-  bottom: 5%;
-  right: 0;
+  bottom: 13%;
+  right: -20px;
 
-  color: rgba(249, 145, 146, 0.18);
+  color: rgba(247, 191, 130, 0.28);
 
-  animation: floatStars 15s ease-in-out infinite reverse;
+  animation: floatingStars 17s ease-in-out infinite reverse;
 }
 
-@keyframes floatStars {
+
+@keyframes floatingStars {
+
   0% {
-    transform: translateY(0px);
+    transform: translateY(0px) rotate(0deg);
   }
 
   50% {
-    transform: translateY(-18px);
+    transform: translateY(-22px) rotate(4deg);
   }
 
   100% {
-    transform: translateY(0px);
+    transform: translateY(0px) rotate(0deg);
   }
+
 }
 
 
@@ -121,11 +116,12 @@ body::after {
 
 nav {
   position: relative;
+
   z-index: 10;
 
   width: 100%;
 
-  padding: 28px 40px;
+  padding: 30px 40px;
 
   text-align: center;
 
@@ -133,13 +129,13 @@ nav {
 
   font-size: 13px;
 
-  letter-spacing: 2px;
+  letter-spacing: 1.8px;
 
   text-transform: uppercase;
 }
 
 nav a {
-  color: var(--soft-text);
+  color: var(--tea-rose);
 
   text-decoration: none;
 
@@ -151,9 +147,9 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--blue);
+  color: var(--deep-blue);
 
-  opacity: 1;
+  opacity: 0.8;
 }
 
 
@@ -163,81 +159,78 @@ nav a:hover {
 
 main {
   position: relative;
+
   z-index: 2;
 
   width: min(900px, calc(100% - 50px));
 
   margin: 0 auto;
 
-  padding: 80px 0 120px;
+  padding: 75px 0 120px;
 }
 
 
 /* =========================================
-   MAIN TITLE
+   MAIN HEADINGS
    ========================================= */
 
 h1 {
-  font-family: "Bodoni Moda", Georgia, serif;
+  font-family: "DM Serif Display", Georgia, serif;
 
   font-weight: 400;
 
-  font-size: clamp(48px, 8vw, 86px);
+  font-size: clamp(52px, 8vw, 90px);
 
-  line-height: 0.95;
+  line-height: 1;
 
-  letter-spacing: -3px;
+  letter-spacing: -1px;
 
-  color: var(--text);
+  color: var(--deep-blue);
 
   margin: 0 0 35px;
 }
 
 
-/* =========================================
-   SECTION HEADINGS
-   ========================================= */
-
 h2 {
-  font-family: "Bodoni Moda", Georgia, serif;
+  font-family: "DM Serif Display", Georgia, serif;
 
   font-weight: 400;
 
-  font-size: clamp(30px, 5vw, 48px);
+  font-size: clamp(34px, 5vw, 52px);
 
   line-height: 1.1;
 
-  color: var(--blue);
+  color: var(--deep-blue);
 
-  margin-top: 80px;
+  margin-top: 75px;
 
   margin-bottom: 22px;
 
   transition:
-    transform 0.3s ease,
-    color 0.3s ease;
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 h2:hover {
-  color: #F99192;
+  color: var(--tea-rose);
 
-  transform: translateX(6px);
+  transform: translateX(5px);
 }
 
 
 h3 {
-  font-family: "Bodoni Moda", Georgia, serif;
+  font-family: "DM Serif Display", Georgia, serif;
 
   font-weight: 400;
 
   font-size: 28px;
 
-  color: var(--text);
+  color: var(--deep-blue);
 }
 
 
 /* =========================================
-   PARAGRAPHS
+   REGULAR TEXT
    ========================================= */
 
 p {
@@ -256,7 +249,7 @@ p {
    ========================================= */
 
 a {
-  color: var(--blue);
+  color: var(--deep-blue);
 
   transition:
     color 0.25s ease,
@@ -264,9 +257,42 @@ a {
 }
 
 a:hover {
-  color: #F97171;
+  color: var(--tea-rose);
 
-  opacity: 0.8;
+  opacity: 0.85;
+}
+
+
+/* =========================================
+   LINK UNDERLINE INTERACTION
+   ========================================= */
+
+main a {
+  position: relative;
+
+  text-decoration: none;
+}
+
+main a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -3px;
+
+  width: 0;
+
+  height: 1px;
+
+  background: var(--tea-rose);
+
+  transition: width 0.3s ease;
+}
+
+main a:hover::after {
+  width: 100%;
 }
 
 
@@ -283,9 +309,7 @@ img {
 
   margin: 40px auto;
 
-  border-radius: 4px;
-
-  opacity: 0.96;
+  border-radius: 8px;
 
   transition:
     transform 0.4s ease,
@@ -293,9 +317,9 @@ img {
 }
 
 img:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
 
-  opacity: 1;
+  opacity: 0.9;
 }
 
 
@@ -304,9 +328,9 @@ img:hover {
    ========================================= */
 
 code {
-  background: rgba(194, 224, 224, 0.45);
+  background: rgba(249, 145, 146, 0.18);
 
-  color: var(--text);
+  color: var(--deep-blue);
 
   padding: 4px 7px;
 
@@ -325,40 +349,9 @@ hr {
 
   height: 1px;
 
-  background: rgba(56, 90, 124, 0.15);
+  background: rgba(56, 90, 124, 0.18);
 
   margin: 60px 0;
-}
-
-
-/* =========================================
-   INTERACTIVE "MAGIC"
-   ========================================= */
-
-main a {
-  position: relative;
-
-  text-decoration: none;
-}
-
-main a::after {
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-  bottom: -3px;
-
-  width: 0;
-  height: 1px;
-
-  background: #F99192;
-
-  transition: width 0.3s ease;
-}
-
-main a:hover::after {
-  width: 100%;
 }
 
 
@@ -373,11 +366,11 @@ main a:hover::after {
 
     font-size: 11px;
 
-    letter-spacing: 1.2px;
+    letter-spacing: 1px;
   }
 
   nav a {
-    margin: 0 4px;
+    margin: 0 5px;
   }
 
   main {
@@ -388,15 +381,14 @@ main a:hover::after {
 
   h1 {
     font-size: 52px;
-
-    letter-spacing: -2px;
   }
 
   h2 {
-    font-size: 34px;
+    font-size: 36px;
   }
 
   p {
     font-size: 15px;
   }
+
 }
