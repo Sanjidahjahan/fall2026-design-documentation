@@ -1,8 +1,9 @@
----
-layout: default
-title: Home
----
+# Sanjidah's Fall 2026 Design Documentation
 
-# Sanjidah Jahan
+This repository contains my design documentation landing page for Creative Embedded Systems - Fall 2026.
 
-Fall 2026 Design Documentation
+## Pages
+
+- [About Me](about.html)
+- [Design Documentation](documentation.html)
+- [Website](https://sanjidahjahan.github.io/fall2026-design-documentation/)
