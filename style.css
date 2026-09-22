@@ -503,13 +503,13 @@ main::after {
 
   filter: blur(0.2px);
 
-  content: "✦";
 }
 
 
 /* Individual stars */
 
 body::before {
+     content: "⋆⭒˚.⋆";
   top: 12%;
   left: 8%;
 
@@ -521,6 +521,7 @@ body::before {
 }
 
 body::after {
+     content: "˚✦⋆";
   top: 25%;
   right: 10%;
 
@@ -532,6 +533,7 @@ body::after {
 }
 
 main::before {
+     content: "⭒˚⋆";
   top: 48%;
   left: 16%;
 
@@ -543,6 +545,7 @@ main::before {
 }
 
 main::after {
+     content: "⋆˚✧";
   top: 70%;
   right: 17%;
 
