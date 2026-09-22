@@ -15,7 +15,7 @@
   --text: #555866;
   --nav: #6F6A4A;
 
-  --stars: rgba(161, 133, 50, 0.42)
+  --stars: rgba(190, 151, 48, 0.55);
 }
 
 
@@ -517,7 +517,7 @@ body::before {
 
   opacity: 0;
 
-  animation: starSprinkleOne 9s ease-in-out infinite;
+  animation: starSprinkleOne 6s ease-in-out infinite;
 }
 
 body::after {
@@ -528,7 +528,7 @@ body::after {
 
   opacity: 0;
 
-  animation: starSprinkleTwo 12s ease-in-out infinite 2s;
+  animation: starSprinkleTwo 8s ease-in-out infinite 1s;
 }
 
 main::before {
@@ -539,7 +539,7 @@ main::before {
 
   opacity: 0;
 
-  animation: starSprinkleThree 10s ease-in-out infinite 4s;
+  animation: starSprinkleThree 7s ease-in-out infinite 2s;
 }
 
 main::after {
@@ -550,7 +550,7 @@ main::after {
 
   opacity: 0;
 
-  animation: starSprinkleFour 13s ease-in-out infinite 1s;
+  animation: starSprinkleFour 9s ease-in-out infinite 1s;
 }
 
 
