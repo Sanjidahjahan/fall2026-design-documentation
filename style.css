@@ -501,125 +501,196 @@ main::after {
 
   white-space: nowrap;
 
-  content: "⋆ ⭒ ˚ . ⋆";
-
   filter: blur(0.2px);
+
+  content: "✦";
 }
 
 
-/* Different sizes and positions */
+/* Individual stars */
 
 body::before {
   top: 12%;
-  left: 7%;
+  left: 8%;
 
-  font-size: 32px;
+  font-size: 20px;
 
-  opacity: 0.50;
+  opacity: 0;
 
-  animation: auraFloatOne 24s ease-in-out infinite;
+  animation: starSprinkleOne 9s ease-in-out infinite;
 }
 
 body::after {
-  right: 7%;
-  bottom: 13%;
+  top: 25%;
+  right: 10%;
 
-  font-size: 40px;
+  font-size: 15px;
 
-  opacity: 0.45;
+  opacity: 0;
 
-  animation: auraFloatTwo 28s ease-in-out infinite;
+  animation: starSprinkleTwo 12s ease-in-out infinite 2s;
 }
 
 main::before {
-  top: 52%;
-  left: 14%;
+  top: 48%;
+  left: 16%;
 
-  font-size: 24px;
+  font-size: 13px;
 
-  opacity: 0.38;
+  opacity: 0;
 
-  animation: auraFloatThree 30s ease-in-out infinite;
+  animation: starSprinkleThree 10s ease-in-out infinite 4s;
 }
 
 main::after {
-  top: 27%;
-  right: 13%;
+  top: 70%;
+  right: 17%;
 
-  font-size: 28px;
+  font-size: 18px;
 
-  opacity: 0.35;
+  opacity: 0;
 
-  animation: auraFloatFour 26s ease-in-out infinite;
+  animation: starSprinkleFour 13s ease-in-out infinite 1s;
 }
 
 
-/* Slow drifting */
+/* Extra tiny stars */
 
-@keyframes auraFloatOne {
+body {
+  background-image:
+    radial-gradient(
+      circle at 22% 18%,
+      var(--stars) 0px,
+      var(--stars) 1px,
+      transparent 2px
+    ),
+    radial-gradient(
+      circle at 72% 14%,
+      var(--stars) 0px,
+      var(--stars) 1px,
+      transparent 2px
+    ),
+    radial-gradient(
+      circle at 88% 42%,
+      var(--stars) 0px,
+      var(--stars) 1px,
+      transparent 2px
+    ),
+    radial-gradient(
+      circle at 30% 67%,
+      var(--stars) 0px,
+      var(--stars) 1px,
+      transparent 2px
+    ),
+    radial-gradient(
+      circle at 78% 82%,
+      var(--stars) 0px,
+      var(--stars) 1px,
+      transparent 2px
+    ),
+    radial-gradient(
+      circle at 48% 30%,
+      var(--stars) 0px,
+      var(--stars) 1px,
+      transparent 2px
+    );
+}
 
-  0% {
-    transform: translate(0, 0) rotate(0deg);
+
+/* =========================================
+   SLOW STAR SPRINKLING
+   ========================================= */
+
+@keyframes starSprinkleOne {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+
+  20% {
+    opacity: 0.55;
   }
 
   50% {
-    transform: translate(45px, 55px) rotate(8deg);
+    opacity: 0.35;
+    transform: translate(18px, 25px);
   }
 
-  100% {
-    transform: translate(0, 0) rotate(0deg);
+  75% {
+    opacity: 0;
+    transform: translate(30px, 45px);
   }
-
 }
 
-@keyframes auraFloatTwo {
 
-  0% {
+@keyframes starSprinkleTwo {
+  0%,
+  100% {
+    opacity: 0;
     transform: translate(0, 0);
+  }
+
+  25% {
+    opacity: 0.45;
+  }
+
+  55% {
+    opacity: 0.30;
+    transform: translate(-20px, 30px);
+  }
+
+  80% {
+    opacity: 0;
+    transform: translate(-35px, 55px);
+  }
+}
+
+
+@keyframes starSprinkleThree {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+
+  18% {
+    opacity: 0.40;
   }
 
   50% {
-    transform: translate(-55px, -45px);
+    opacity: 0.25;
+    transform: translate(25px, -20px);
   }
 
-  100% {
-    transform: translate(0, 0);
+  78% {
+    opacity: 0;
+    transform: translate(40px, -35px);
   }
-
 }
 
-@keyframes auraFloatThree {
 
-  0% {
-    transform: translate(0, 0);
-  }
-
-  50% {
-    transform: translate(35px, -50px);
-  }
-
+@keyframes starSprinkleFour {
+  0%,
   100% {
+    opacity: 0;
     transform: translate(0, 0);
   }
 
+  22% {
+    opacity: 0.50;
+  }
+
+  55% {
+    opacity: 0.30;
+    transform: translate(-25px, 20px);
+  }
+
+  82% {
+    opacity: 0;
+    transform: translate(-40px, 40px);
+  }
 }
-
-@keyframes auraFloatFour {
-
-  0% {
-    transform: translate(0, 0);
-  }
-
-  50% {
-    transform: translate(-40px, 45px);
-  }
-
-  100% {
-    transform: translate(0, 0);
-  }
-
-}
-
 
 /* =========================================
    IMAGES
