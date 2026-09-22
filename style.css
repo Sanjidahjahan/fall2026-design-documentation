@@ -1,73 +1,402 @@
-/* ===== General Page Styling ===== */
+/* =========================================
+   SANJIDAH'S DESIGN DOCUMENTATION
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=DM+Sans:wght@400;500&display=swap');
+
+
+/* =========================================
+   COLOR PALETTE
+   ========================================= */
+
+:root {
+  --cream: #F9E4D6;
+  --tea-rose: #FAD2D3;
+  --lilac: #EBC6CE;
+  --water: #C2E0E0;
+  --sour: #F7BF82;
+  --blue: #4687B7;
+
+  --text: #385A7C;
+  --soft-text: rgba(56, 90, 124, 0.72);
+}
+
+
+/* =========================================
+   BASIC RESET
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  background-color: #FFF8DE;
-  color: #333333;
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(250, 210, 211, 0.35),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 85% 70%,
+      rgba(194, 224, 224, 0.35),
+      transparent 25%
+    ),
+    var(--cream);
+
+  color: var(--text);
+
+  font-family: "DM Sans", sans-serif;
+
   line-height: 1.7;
+
+  overflow-x: hidden;
+
+  position: relative;
 }
 
-/* ===== Main Content ===== */
 
-main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 60px 30px;
+/* =========================================
+   FLOATING STARS
+   ========================================= */
+
+body::before,
+body::after {
+  content: "✦  ✧  ⋆  ✦  ˚  ✧";
+  position: fixed;
+
+  color: rgba(70, 135, 183, 0.16);
+
+  font-size: 18px;
+  letter-spacing: 55px;
+  line-height: 100px;
+
+  pointer-events: none;
+  z-index: 0;
+
+  white-space: pre-wrap;
 }
 
-/* ===== Headings ===== */
+body::before {
+  top: 8%;
+  left: 3%;
 
-h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
+  animation: floatStars 12s ease-in-out infinite;
 }
 
-h2 {
-  font-size: 32px;
-  margin-top: 50px;
+body::after {
+  bottom: 5%;
+  right: 0;
+
+  color: rgba(249, 145, 146, 0.18);
+
+  animation: floatStars 15s ease-in-out infinite reverse;
 }
 
-h3 {
-  font-size: 24px;
+@keyframes floatStars {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-18px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
-/* ===== Links ===== */
 
-a {
-  color: #4F6FAE;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* ===== Navigation ===== */
+/* =========================================
+   NAVIGATION
+   ========================================= */
 
 nav {
+  position: relative;
+  z-index: 10;
+
+  width: 100%;
+
+  padding: 28px 40px;
+
   text-align: center;
-  padding: 25px;
-  font-size: 16px;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 13px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
 }
 
 nav a {
-  margin: 0 8px;
+  color: var(--soft-text);
+
+  text-decoration: none;
+
+  margin: 0 10px;
+
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease;
 }
 
-/* ===== Images ===== */
+nav a:hover {
+  color: var(--blue);
+
+  opacity: 1;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+
+main {
+  position: relative;
+  z-index: 2;
+
+  width: min(900px, calc(100% - 50px));
+
+  margin: 0 auto;
+
+  padding: 80px 0 120px;
+}
+
+
+/* =========================================
+   MAIN TITLE
+   ========================================= */
+
+h1 {
+  font-family: "Bodoni Moda", Georgia, serif;
+
+  font-weight: 400;
+
+  font-size: clamp(48px, 8vw, 86px);
+
+  line-height: 0.95;
+
+  letter-spacing: -3px;
+
+  color: var(--text);
+
+  margin: 0 0 35px;
+}
+
+
+/* =========================================
+   SECTION HEADINGS
+   ========================================= */
+
+h2 {
+  font-family: "Bodoni Moda", Georgia, serif;
+
+  font-weight: 400;
+
+  font-size: clamp(30px, 5vw, 48px);
+
+  line-height: 1.1;
+
+  color: var(--blue);
+
+  margin-top: 80px;
+
+  margin-bottom: 22px;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+h2:hover {
+  color: #F99192;
+
+  transform: translateX(6px);
+}
+
+
+h3 {
+  font-family: "Bodoni Moda", Georgia, serif;
+
+  font-weight: 400;
+
+  font-size: 28px;
+
+  color: var(--text);
+}
+
+
+/* =========================================
+   PARAGRAPHS
+   ========================================= */
+
+p {
+  max-width: 720px;
+
+  font-size: 16px;
+
+  color: var(--soft-text);
+
+  margin-bottom: 24px;
+}
+
+
+/* =========================================
+   LINKS
+   ========================================= */
+
+a {
+  color: var(--blue);
+
+  transition:
+    color 0.25s ease,
+    opacity 0.25s ease;
+}
+
+a:hover {
+  color: #F97171;
+
+  opacity: 0.8;
+}
+
+
+/* =========================================
+   IMAGES
+   ========================================= */
 
 img {
+  display: block;
+
   max-width: 100%;
+
   height: auto;
-  border-radius: 12px;
+
+  margin: 40px auto;
+
+  border-radius: 4px;
+
+  opacity: 0.96;
+
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
 }
 
-/* ===== Code ===== */
+img:hover {
+  transform: translateY(-5px);
+
+  opacity: 1;
+}
+
+
+/* =========================================
+   CODE
+   ========================================= */
 
 code {
-  background: #F2E9C9;
-  padding: 3px 6px;
+  background: rgba(194, 224, 224, 0.45);
+
+  color: var(--text);
+
+  padding: 4px 7px;
+
   border-radius: 5px;
+
+  font-size: 0.9em;
+}
+
+
+/* =========================================
+   HORIZONTAL LINES
+   ========================================= */
+
+hr {
+  border: none;
+
+  height: 1px;
+
+  background: rgba(56, 90, 124, 0.15);
+
+  margin: 60px 0;
+}
+
+
+/* =========================================
+   INTERACTIVE "MAGIC"
+   ========================================= */
+
+main a {
+  position: relative;
+
+  text-decoration: none;
+}
+
+main a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -3px;
+
+  width: 0;
+  height: 1px;
+
+  background: #F99192;
+
+  transition: width 0.3s ease;
+}
+
+main a:hover::after {
+  width: 100%;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  nav {
+    padding: 22px 12px;
+
+    font-size: 11px;
+
+    letter-spacing: 1.2px;
+  }
+
+  nav a {
+    margin: 0 4px;
+  }
+
+  main {
+    width: calc(100% - 35px);
+
+    padding-top: 55px;
+  }
+
+  h1 {
+    font-size: 52px;
+
+    letter-spacing: -2px;
+  }
+
+  h2 {
+    font-size: 34px;
+  }
+
+  p {
+    font-size: 15px;
+  }
 }
