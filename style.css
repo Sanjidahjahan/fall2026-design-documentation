@@ -7,7 +7,7 @@
 
 :root {
   --yellow: #FDFBD4;
-  --green: #BDB96A;
+  --green: #85834F;
 
   --deep-purple: #66507F;
   --light-purple: #8A74A2;
@@ -15,7 +15,7 @@
   --text: #555866;
   --nav: #6F6A4A;
 
-  --stars: rgba(255, 255, 255, 0.50);
+  --stars: rgba(231, 190, 72, 0.42);
 }
 
 
@@ -135,7 +135,7 @@ nav {
 
   font-family: "DM Sans", sans-serif;
 
-  font-size: 13px;
+  font-size: 14px;
 
   letter-spacing: 1.8px;
 
@@ -283,7 +283,9 @@ h3 {
 
   min-height: calc(100vh - 150px);
 
-  padding-top: 20px;
+  padding-top: 0;
+
+  transform: translateY(-35px);
 }
 
 
@@ -294,21 +296,19 @@ h3 {
 
   cursor: default;
 
-  margin-bottom: 12px;
+  margin-bottom: 22px;
 
   display: block;
 
   white-space: nowrap;
 
-  transition:
-    transform 0.4s ease,
-    opacity 0.4s ease;
+  animation: namePulse 3.5s ease-in-out infinite;
 }
 
 
 /* Slow gentle pulse when cursor is on name */
 
-.page-home h1:hover {
+.page-home h1 {
   animation: namePulse 3.5s ease-in-out infinite;
 }
 
