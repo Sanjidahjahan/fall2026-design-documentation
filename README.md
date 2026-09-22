@@ -1,7 +1,6 @@
-# Sanjidah's Fall 2026 Design Documentation
+# Fall 2026 Design Documentation
 
-## About Me
+Hello! This site holds my design documentation landing page for Creative Embedded Systems this semester.
 
-Hi! I'm Sanjidah, a senior studying Cognitive Science and Human-Computer Interaction at Barnard College, Columbia University. I love designing simple, intuitive experiences and thinking about how people interact with the things they use every day, usually on a screen.
-
-This semester, I'm excited to take that thinking off the screen and into physical space. I want to see how designing with sensors, materials, and circuits changes the way I approach interaction compared to designing for an app. I'm especially curious what physical constraints can teach me about intuitive design that a digital interface can't.
+- [About Me](about.html)
+- [Design Documentation](documentation.html)
