@@ -333,11 +333,13 @@ h3 {
 .page-home h1 + p {
   color: var(--light-purple);
 
-  font-size: 17px;
+  font-size: 18px;
 
   letter-spacing: 0.8px;
 
   opacity: 0.88;
+
+ margin-top: 12px;
 }
 
 
