@@ -51,11 +51,10 @@ body {
 
 
 /* =========================================
-   AURA BACKGROUNDS
+    BACKGROUNDS
    ========================================= */
 
-/* HOME
-   Soft yellow aura */
+/* HOME */
 
 .page-home {
   background:
@@ -79,8 +78,7 @@ body {
 }
 
 
-/* ABOUT ME
-   Yellow with a soft purple aura */
+/* ABOUT ME */
 
 .page-about-me {
   background:
@@ -99,8 +97,7 @@ body {
 }
 
 
-/* project DOCUMENTATION
-   Yellow with a lavender aura */
+/* project DOCUMENTATION */
 
 .page-project-documentation {
   background:
@@ -306,7 +303,7 @@ h3 {
 }
 
 
-/* Slow gentle pulse when cursor is on name */
+/* Slow pulse when cursor is on name */
 
 .page-home h1 {
   animation: namePulse 3.5s ease-in-out infinite;
@@ -478,7 +475,7 @@ footer span {
 
 
 /* =========================================
-   FLOATING AURA STARS
+   FLOATING STARS
    ========================================= */
 
 body::before,
@@ -556,9 +553,6 @@ main::after {
   animation: starSprinkleFour 9s ease-in-out infinite 1s;
 }
 
-
-/* Extra tiny stars */
-
 body {
   background-image:
     radial-gradient(
@@ -599,10 +593,6 @@ body {
     );
 }
 
-
-/* =========================================
-   SLOW STAR SPRINKLING
-   ========================================= */
 
 @keyframes starSprinkleOne {
   0%,
