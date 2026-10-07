@@ -5,7 +5,7 @@ title: Project Documentation
 
 # Project Documentation
 
-This page holds my project documentation for Creative Embedded Systems this semester :)
+⋆⭒˚.⋆ This page holds my project documentation for Creative Embedded Systems this semester! ⋆⭒˚.⋆
 
 ## Project 1: Ocean Generative Art
 
