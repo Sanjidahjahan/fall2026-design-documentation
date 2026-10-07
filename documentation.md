@@ -45,7 +45,7 @@ The TFT display is placed behind a cutout in a paper envelope so that the screen
 
 ### Visual Documentation
 
-<h4>Project Video</h4>
+<h4>Final Module 1 Project Video</h4>
 
 <div class="project-video">
   <video autoplay muted loop playsinline controls>
@@ -54,9 +54,6 @@ The TFT display is placed behind a cutout in a paper envelope so that the screen
   </video>
 </div>
 
-### Final Design
-
-<img class="project-image" src="https://raw.githubusercontent.com/Sanjidahjahan/Ocean-Generative-Art/main/images/demo.gif" alt="Ocean Generative Art">
 
 ### Installation Photos
 
