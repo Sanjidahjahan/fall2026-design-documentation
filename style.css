@@ -807,25 +807,30 @@ code {
 
 }
 
-.project-image,
+.project-image {
+  display: block !important;
+  width: 850px !important;
+  height: 450px !important;
+  max-width: 100% !important;
+  object-fit: cover !important;
+  margin: 20px auto !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
 .project-video {
-  width: 100%;
-  max-width: 850px;
-  height: 450px;
-  margin: 20px auto;
-  border-radius: 12px;
+  width: 850px !important;
+  height: 450px !important;
+  max-width: 100% !important;
+  margin: 20px auto !important;
+  border-radius: 12px !important;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.project-image {
-  display: block;
-  object-fit: cover;
-}
-
 .project-video video {
   display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
 }
