@@ -236,6 +236,9 @@ h3 {
   margin-top: 35px;
 }
 
+h4 {
+  font-size: 22px;
+}
 
 /* =========================================
    project DOCUMENTATION TITLE
@@ -797,29 +800,26 @@ code {
   }
 
 }
-/* Project documentation images */
 
-.project-image {
-  display: block;
-  width: 100%;
-  max-width: 850px;
-  height: 450px;
-  object-fit: contain;
-  margin: 20px auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
+.project-image,
 .project-video {
   width: 100%;
   max-width: 850px;
+  height: 450px;
   margin: 20px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.project-image {
+  display: block;
+  object-fit: cover;
 }
 
 .project-video video {
   display: block;
   width: 100%;
-  max-height: 450px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  object-fit: cover;
 }
