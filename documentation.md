@@ -48,7 +48,7 @@ The TFT display is placed behind a cutout in a paper envelope so that the screen
 #### Project Video
 
 <video controls width="100%">
-  <source src="videos/demo.video.mov" type="video/quicktime">
+  <source src="videos/demo.video.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
