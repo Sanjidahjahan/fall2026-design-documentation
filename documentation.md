@@ -54,15 +54,13 @@ The TFT display is placed behind a cutout in a paper envelope so that the screen
   </video>
 </div>
 
-
 <h4>Installation Photos</h4>
 
-<img class="project-image" src="https://raw.githubusercontent.com/Sanjidahjahan/Ocean-Generative-Art/main/images/installation-full.png" alt="Full installation">
+<img class="project-image" style="width: 100%; max-width: 850px; height: 450px; object-fit: cover;" src="https://raw.githubusercontent.com/Sanjidahjahan/Ocean-Generative-Art/main/images/installation-full.png" alt="Full installation">
 
-<img class="project-image" src="https://raw.githubusercontent.com/Sanjidahjahan/Ocean-Generative-Art/main/images/installation-closeup.jpg" alt="Screen close-up">
+<img class="project-image" style="width: 100%; max-width: 850px; height: 450px; object-fit: cover;" src="https://raw.githubusercontent.com/Sanjidahjahan/Ocean-Generative-Art/main/images/installation-closeup.jpg" alt="Screen close-up">
 
-<img class="project-image" src="https://raw.githubusercontent.com/Sanjidahjahan/Ocean-Generative-Art/main/images/installation-wired.png" alt="Wired installation">
-
+<img class="project-image" style="width: 100%; max-width: 850px; height: 450px; object-fit: cover;" src="https://raw.githubusercontent.com/Sanjidahjahan/Ocean-Generative-Art/main/images/installation-wired.png" alt="Wired installation">
 
 ### Project Repository
 
