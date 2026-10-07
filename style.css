@@ -810,7 +810,7 @@ code {
 .project-media {
   width: 100%;
   max-width: 850px;
-  height: 450px;
+  height: 550px;
   margin: 20px auto;
   border-radius: 12px;
   overflow: hidden;
@@ -821,8 +821,8 @@ code {
 }
 
 .project-media img {
-  width: 780px;
-  height: 380px;
+  width: 750px;
+  height: 450px;
   object-fit: cover;
   border-radius: 12px;
 }
