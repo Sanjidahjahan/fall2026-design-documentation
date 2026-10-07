@@ -55,14 +55,15 @@ The TFT display is placed behind a cutout in a paper envelope so that the screen
 </div>
 
 
-### Installation Photos
+<h4>Installation Photos</h4>
 
 <img class="project-image" src="https://raw.githubusercontent.com/Sanjidahjahan/Ocean-Generative-Art/main/images/installation-full.png" alt="Full installation">
 
 <img class="project-image" src="https://raw.githubusercontent.com/Sanjidahjahan/Ocean-Generative-Art/main/images/installation-closeup.jpg" alt="Screen close-up">
 
 <img class="project-image" src="https://raw.githubusercontent.com/Sanjidahjahan/Ocean-Generative-Art/main/images/installation-wired.png" alt="Wired installation">
-p
+
+
 ### Project Repository
 
 [View the Ocean Generative Art GitHub repository](https://github.com/Sanjidahjahan/Ocean-Generative-Art)
