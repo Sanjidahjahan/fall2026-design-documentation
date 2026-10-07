@@ -808,29 +808,29 @@ code {
 }
 
 .project-image {
-  display: block !important;
-  width: 850px !important;
-  height: 450px !important;
-  max-width: 100% !important;
-  object-fit: cover !important;
-  margin: 20px auto !important;
-  border-radius: 12px !important;
+  display: block;
+  width: 100%;
+  max-width: 850px;
+  height: 450px;
+  object-fit: cover;
+  margin: 20px auto;
+  border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .project-video {
-  width: 850px !important;
-  height: 450px !important;
-  max-width: 100% !important;
-  margin: 20px auto !important;
-  border-radius: 12px !important;
+  width: 100%;
+  max-width: 850px;
+  height: 450px;
+  margin: 20px auto;
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .project-video video {
   display: block;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
