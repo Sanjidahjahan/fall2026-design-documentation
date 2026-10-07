@@ -45,25 +45,27 @@ The TFT display is placed behind a cutout in a paper envelope so that the screen
 
 ### Visual Documentation
 
-#### Project Video
+<h4>Project Video</h4>
 
-<video controls width="100%">
-  <source src="video/demo.video.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<div class="project-video">
+  <video autoplay muted loop playsinline controls>
+    <source src="video/demo.video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
 
-#### Final Design
+### Final Design
 
-![Ocean Generative Art](https://raw.githubusercontent.com/Sanjidahjahan/Ocean-Generative-Art/main/images/demo.gif)
+<img class="project-image" src="https://raw.githubusercontent.com/Sanjidahjahan/Ocean-Generative-Art/main/images/demo.gif" alt="Ocean Generative Art">
 
-#### Installation Photos
+### Installation Photos
 
-![Full installation](https://raw.githubusercontent.com/Sanjidahjahan/Ocean-Generative-Art/main/images/installation-full.png)
+<img class="project-image" src="https://raw.githubusercontent.com/Sanjidahjahan/Ocean-Generative-Art/main/images/installation-full.png" alt="Full installation">
 
-![Screen close-up](https://raw.githubusercontent.com/Sanjidahjahan/Ocean-Generative-Art/main/images/installation-closeup.jpg)
+<img class="project-image" src="https://raw.githubusercontent.com/Sanjidahjahan/Ocean-Generative-Art/main/images/installation-closeup.jpg" alt="Screen close-up">
 
-![Wired installation](https://raw.githubusercontent.com/Sanjidahjahan/Ocean-Generative-Art/main/images/installation-wired.png)
-
+<img class="project-image" src="https://raw.githubusercontent.com/Sanjidahjahan/Ocean-Generative-Art/main/images/installation-wired.png" alt="Wired installation">
+p
 ### Project Repository
 
 [View the Ocean Generative Art GitHub repository](https://github.com/Sanjidahjahan/Ocean-Generative-Art)
