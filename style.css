@@ -821,9 +821,9 @@ code {
 }
 
 .project-media img {
-  width: 92%;
-  height: 92%;
-  object-fit: contain;
+  width: 780px;
+  height: 380px;
+  object-fit: cover;
   border-radius: 12px;
 }
 
