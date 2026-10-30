@@ -151,7 +151,7 @@ I used ChatGPT to help me understand problems, explore possible solutions, and m
 
 <div class="project-video">
   <video autoplay muted loop playsinline controls>
-    <source src="Demo-esp32.mp4" type="video/mp4">
+    <source src="ESP32_demo.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </div>
