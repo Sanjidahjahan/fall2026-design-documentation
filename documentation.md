@@ -90,7 +90,7 @@ My goal was to make drawing simple and fun. Instead of using a mouse, users can 
 
 One of my main design decisions was keeping the familiar look of the original Etch A Sketch while changing how users interact with it. I chose a red frame and a pink-toned drawing area to give the digital version its own style.
 
-**Drawing Interface and Controls**
+<h4>Drawing Interface and Controls</h4>
 
 <div class="project-video">
   <video autoplay muted loop playsinline controls>
@@ -103,7 +103,7 @@ Since the project required using physical controls, I used the joystick to move 
 
 I also added an indicator on the screen to show the selected brush size and color. This makes it easier for users to see which settings they are using while drawing.
 
-**Changing Colors and Brush Sizes**
+<h4>Changing Colors and Brush Sizes</h4> 
 
 <div class="project-video">
   <video autoplay muted loop playsinline controls>
@@ -135,7 +135,7 @@ This code uses the joystick readings to control the cursor's movement. The dead 
 
 I also used a PGraphics layer in Processing so the lines stay on the screen while the rest of the interface updates.
 
-**Final Module 2 Project Video**
+<h4>Final Module 2 Project Video</h4>
 
 <div class="project-video">
   <video autoplay muted loop playsinline controls>
@@ -158,7 +158,7 @@ The physical setup uses an ESP32 TTGO T-Display, joystick, potentiometer, yellow
 
 The ESP32 connects to my Mac through USB and sends the control inputs to the Processing application. This allows the physical components to control the digital drawing interface.
 
-**Hardware Setup**
+<h4>Hardware Setup</h4>
 
 <div class="project-media">
   <img src="https://raw.githubusercontent.com/Sanjidahjahan/fall2026-design-documentation/main/ESP32_breadboard.png" alt="ESP32 and breadboard hardware setup">
