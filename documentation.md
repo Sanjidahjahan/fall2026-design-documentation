@@ -150,7 +150,7 @@ I used ChatGPT to help me understand problems, explore possible solutions, and m
 <h4>Final Module 2 Project Video</h4>
 
 <div class="project-video">
-  <video autoplay muted loop playsinline controls>
+  <video controls width="100%" style="width: 100%; height: auto; object-fit: contain;">
     <source src="Demo-esp32.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
