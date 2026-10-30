@@ -151,7 +151,7 @@ Here are videos demonstrating my Digital Etch A Sketch project and its main feat
 
 **Hardware Setup**
 
-![ESP32 breadboard setup](ESP32_breadboard.jpg)
+![ESP32 breadboard setup](ESP32_breadboard.png)
 
 ### Project Repository
 
