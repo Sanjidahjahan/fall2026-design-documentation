@@ -160,7 +160,7 @@ I used ChatGPT to help me understand problems, explore possible solutions, and m
 
 <div class="project-video">
   <video autoplay muted loop playsinline controls>
-    <source src="Etch-a-sketch-demo.mov" type="video/quicktime">
+    <source src="Etch-a-sketch-demo.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </div>
@@ -169,7 +169,7 @@ I used ChatGPT to help me understand problems, explore possible solutions, and m
 
 <div class="project-video">
   <video autoplay muted loop playsinline controls>
-    <source src="Etch-a-sketch-colors-brush.mov" type="video/quicktime">
+    <source src="Etch-a-sketch-colors-brush.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </div>
