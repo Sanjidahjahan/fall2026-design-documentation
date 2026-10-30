@@ -35,6 +35,15 @@ The animation uses a sprite buffer so the ocean, fish, bubbles, and shark can be
 
 The fish are controlled using arrays for their position, size, speed, direction, and color. They normally swim across the screen and wrap around when they reach the edge. When the shark becomes active, the fish change direction and move faster.
 
+<h4>Final Module 1 Project Video</h4>
+
+<div class="project-video">
+  <video autoplay muted loop playsinline controls>
+    <source src="video/demo.video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
 ### Technical Challenges
 
 One challenge was getting multiple animated elements to move smoothly at the same time. I used a sprite buffer to draw the full scene before displaying it, which helped reduce visual flickering.
@@ -45,18 +54,7 @@ Another challenge was making the shark interaction noticeable. At first, simply 
 
 The TFT display is placed behind a cutout in a paper envelope so that the screen becomes the ocean portion of the aquarium ticket. The ESP32 and LiPo battery are kept behind the envelope. I decorated the front of the envelope to make it look like an aquarium ocean exhibit ticket.
 
-### Visual Documentation
-
-<h4>Final Module 1 Project Video</h4>
-
-<div class="project-video">
-  <video autoplay muted loop playsinline controls>
-    <source src="video/demo.video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>
-
-<h4>Installation Photos</h4>
+<h4>Installation Photos</h4> 
 
 <div class="project-media">
   <img src="https://raw.githubusercontent.com/Sanjidahjahan/Ocean-Generative-Art/main/images/installation-full.png" alt="Full installation">
@@ -170,7 +168,7 @@ I used ChatGPT (GPT-6) for coding assistance and troubleshooting during this pro
 
 Some examples of prompts I used were: "Why does my Mac show the cu.usbserial port as disconnected, even though my ESP32 was connecting and working before?" and "How can I make the different brush sizes in my Processing sketch more visible while keeping the drawing experience the same?"
 
-I also asked, "What code should I add to my original Processing sketch so the lines stay on the screen while the rest of the interface updates?" This helped me work with a PGraphics layer to keep the drawing visible as the interface updates.&#x20;
+I also asked, "What code should I add to my original Processing sketch so the lines stay on the screen while the rest of the interface updates?" This helped me figure out how to use a separate drawing layer so new lines would stay visible instead of disappearing whenever the interface refreshed.
 
 I used the suggestions to troubleshoot and make changes, then tested the code and hardware to see what worked for my project.
 
