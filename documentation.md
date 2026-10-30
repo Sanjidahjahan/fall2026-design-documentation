@@ -7,6 +7,8 @@ title: Project Documentation
 
 <p class="intro-text">⋆⭒˚.⋆ This page holds my project documentation for Creative Embedded Systems this semester! ⋆⭒˚.⋆</p>
 
+---
+
 ## Project 1: Ocean Generative Art
 
 ### Artistic Vision
@@ -84,7 +86,7 @@ I wanted the design to feel recognizable, so I kept the classic red frame and ro
 
 My goal was to make drawing feel simple and playful. Instead of using a mouse, users control the drawing with a physical joystick. They can also change the brush size, switch colors, and clear the screen using the other physical components. I wanted the project to combine the feeling of a traditional drawing toy with the flexibility of digital interaction.
 
-### Important Design Decisions
+### Design Decisions
 
 One of my main design decisions was keeping the familiar appearance of the original Etch A Sketch while creating a digital version. I chose a deep red frame, a soft pink drawing area, and gold details to make the interface feel like a redesigned version of the original toy.
 
@@ -92,15 +94,15 @@ I also decided to use physical controls instead of having users interact with th
 
 Another decision was adding a small on-screen indicator showing the selected brush size and color. This makes it easier for users to understand which settings they are using without having to guess.
 
-Throughout the process, I adjusted the interface and controls based on testing. I wanted the different brush sizes and colors to be noticeable, while keeping the overall design simple and close to the original Etch A Sketch experience.
+Throughout the process, I adjusted the interface and controls based on testing. I wanted the different brush sizes and colors to be noticeable while keeping the overall design simple and close to the original Etch A Sketch experience.
 
-### Technical Implementation
+### Technical Process
 
-The project uses an ESP32 TTGO T-Display connected to a joystick, push button, and potentiometer. I used Arduino IDE to read the sensor inputs and Processing to create the digital drawing interface.
+I programmed the project using an ESP32 TTGO T-Display, Arduino IDE, and Processing. The ESP32 is connected to a joystick, a push button, and a potentiometer. Arduino reads the physical inputs and sends the values to Processing through serial communication.
 
-The Arduino code continuously reads the joystick's X and Y positions, the joystick click, the yellow push button, and the potentiometer value. It sends these five values to Processing through serial communication as a comma-separated line. Processing reads this information and uses it to control the drawing experience.
+The Arduino code continuously reads the joystick's X and Y positions, the joystick click, the yellow push button, and the potentiometer value. It sends these five values to Processing as a comma-separated line. Processing reads the information and uses it to control the drawing experience.
 
-One of the most important parts of my Processing code is how the joystick controls the drawing cursor:
+One important part of my Processing code is how the joystick controls the drawing cursor:
 
 ```java
 float speedX = map(joyX, 0, 4095, -6, 6);
@@ -115,11 +117,21 @@ penY = constrain(penY + speedY, 0, screenH - 1);
 
 This code maps the joystick readings into drawing movement on the screen. The dead zone prevents the cursor from drifting when the joystick is not being touched, and `constrain()` keeps the cursor within the drawing area.
 
-I also used a PGraphics drawing layer to keep the lines on the screen as the interface updates. This allows the drawing to remain visible while the rest of the interface is redrawn.
+I also used a PGraphics drawing layer to keep the lines visible as the interface updates. This allows the drawing to remain on the screen while the rest of the interface is redrawn.
 
-One challenge I encountered was getting all the physical components to communicate correctly with Processing. I had to troubleshoot the serial connection between the ESP32 and my Mac, as well as the potentiometer readings. I also adjusted the brush sizes after testing because the original difference between the sizes was difficult to notice. I eventually used three sizes, 4, 7, and 10, and added an on-screen indicator showing the selected brush size and color.
+### Technical Challenges
 
-Working through these issues helped me understand how sensor inputs, serial communication, and Processing work together to create an interactive experience.
+One challenge was getting all the physical components to communicate correctly with Processing. I had to troubleshoot the serial connection between the ESP32 and my Mac, as well as the potentiometer readings.
+
+Another challenge was making the brush sizes noticeably different. At first, the difference between the sizes was difficult to see, so I adjusted them to three sizes: 4, 7, and 10. I also added an on-screen indicator showing the selected brush size and color.
+
+Testing the project helped me understand how the different sensor inputs, serial communication, and Processing work together. I made adjustments to both the hardware and interface until the controls worked as expected.
+
+### Physical Setup
+
+The physical setup uses an ESP32 TTGO T-Display connected to a joystick, potentiometer, and two push-button controls. The joystick is used to move the drawing cursor and select brush sizes, while the potentiometer changes the drawing color. The separate yellow button clears the drawing screen.
+
+The components are connected through a breadboard, with the ESP32 communicating with the Processing application running on my Mac. This setup allows the physical controls to interact with the digital drawing interface.
 
 ### AI Support Used
 
@@ -131,30 +143,43 @@ Some examples of prompts I used include:
 - "How can I make the different brush sizes in my Processing sketch more visible while keeping the drawing experience the same?"
 - "How can I add an indicator on the screen that displays the currently selected brush size and color without changing the original Etch A Sketch-inspired design?"
 
-I used ChatGPT to help me understand problems, explore possible solutions, and make improvements as I developed the project. I tested changes with my actual hardware and Processing sketch and adjusted the design based on what worked. 
+I used ChatGPT to help me understand problems, explore possible solutions, and make improvements as I developed the project. I tested changes with my actual hardware and Processing sketch and adjusted the design based on what worked.
 
 ### Visual Documentation
 
-Here are videos demonstrating my Digital Etch A Sketch project and its main features.
+<h4>Final Module 2 Project Video</h4>
 
-**Project Demonstration**
+<div class="project-video">
+  <video autoplay muted loop playsinline controls>
+    <source src="Demo-esp32.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
 
-<video controls width="100%" src="Demo-esp32.mp4"></video>
+<h4>Drawing Interface and Controls</h4>
 
-**Drawing Interface and Controls**
+<div class="project-video">
+  <video autoplay muted loop playsinline controls>
+    <source src="Etch-a-sketch-demo.mov" type="video/quicktime">
+    Your browser does not support the video tag.
+  </video>
+</div>
 
-<video controls width="100%" src="Etch-a-sketch-demo.mov"></video>
+<h4>Changing Colors and Brush Sizes</h4>
 
-**Changing Colors and Brush Sizes**
+<div class="project-video">
+  <video autoplay muted loop playsinline controls>
+    <source src="Etch-a-sketch-colors-brush.mov" type="video/quicktime">
+    Your browser does not support the video tag.
+  </video>
+</div>
 
-<video controls width="100%" src="Etch-a-sketch-colors-brush.mov"></video>
+<h4>Hardware Setup</h4>
 
-**Hardware Setup**
-
-![ESP32 breadboard setup](ESP32_breadboard.png)
+<div class="project-media">
+  <img src="https://raw.githubusercontent.com/Sanjidahjahan/fall2026-design-documentation/main/ESP32_breadboard.png" alt="ESP32 and breadboard hardware setup">
+</div>
 
 ### Project Repository
 
-You can find the Arduino and Processing code, README, GIF demonstration, and circuit diagram in my GitHub repository:
-
-[Digital Etch A Sketch – GitHub Repository](https://github.com/Sanjidahjahan/digital-etch-a-sketch)
+[Click for Digital Etch A Sketch GitHub repository](https://github.com/Sanjidahjahan/digital-etch-a-sketch)
