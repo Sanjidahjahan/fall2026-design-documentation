@@ -80,29 +80,45 @@ The TFT display is placed behind a cutout in a paper envelope so that the screen
 
 ### Artistic Vision
 
-For this project, I wanted to recreate the nostalgic experience of using an Etch A Sketch but give it a digital twist. I liked the idea of taking a familiar childhood drawing toy and turning it into an interactive experience using physical controls and a computer screen.
+For this project, I wanted to recreate the original Etch A Sketch but give it a digital twist. I liked the idea of taking a familiar childhood toy and making it interactive using physical controls and a computer screen.
 
-I wanted the design to feel recognizable, so I kept the classic red frame and round control knobs as inspiration. I used a soft pink drawing screen with gold details to give the interface its own visual style while still keeping the appearance of the original toy.
+I kept the red frame of the original Etch A Sketch but gave the interface a different look with a pink-toned drawing area and different details for the brush size and color settings.
 
-My goal was to make drawing feel simple and playful. Instead of using a mouse, users control the drawing with a physical joystick. They can also change the brush size, switch colors, and clear the screen using the other physical components. I wanted the project to combine the feeling of a traditional drawing toy with the flexibility of digital interaction.
+My goal was to make drawing simple and fun. Instead of using a mouse, users can move a joystick to draw on the screen, change the brush size, switch colors, and clear their drawing using the other physical controls.
 
 ### Design Decisions
 
-One of my main design decisions was keeping the familiar appearance of the original Etch A Sketch while creating a digital version. I chose a deep red frame, a soft pink drawing area, and gold details to make the interface feel like a redesigned version of the original toy.
+One of my main design decisions was keeping the familiar look of the original Etch A Sketch while changing how users interact with it. I chose a red frame and a pink-toned drawing area to give the digital version its own style.
 
-I also decided to use physical controls instead of having users interact with the screen using a mouse. The joystick controls the drawing movement, while clicking the joystick cycles through three brush sizes: 4, 7, and 10. I added a potentiometer to let users switch between five drawing colors and a separate yellow button to clear the screen.
+**Drawing Interface and Controls**
 
-Another decision was adding a small on-screen indicator showing the selected brush size and color. This makes it easier for users to understand which settings they are using without having to guess.
+<div class="project-video">
+  <video autoplay muted loop playsinline controls>
+    <source src="Etch-a-sketch-demo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
 
-Throughout the process, I adjusted the interface and controls based on testing. I wanted the different brush sizes and colors to be noticeable while keeping the overall design simple and close to the original Etch A Sketch experience.
+Since the project required using physical controls, I used the joystick to move the drawing cursor and clicking it to change between three brush sizes: 4, 7, and 10. The potentiometer switches between five drawing colors, and the separate yellow button clears the screen.
+
+I also added an indicator on the screen to show the selected brush size and color. This makes it easier for users to see which settings they are using while drawing.
+
+**Changing Colors and Brush Sizes**
+
+<div class="project-video">
+  <video autoplay muted loop playsinline controls>
+    <source src="Etch-a-sketch-colors-brush.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
 
 ### Technical Process
 
-I programmed the project using an ESP32 TTGO T-Display, Arduino IDE, and Processing. The ESP32 is connected to a joystick, a push button, and a potentiometer. Arduino reads the physical inputs and sends the values to Processing through serial communication.
+I built the project using an ESP32 TTGO T-Display, Arduino IDE, and Processing. The ESP32 connects to a joystick, push button, and potentiometer. The Arduino code reads the controls and sends their values to Processing through serial communication.
 
-The Arduino code continuously reads the joystick's X and Y positions, the joystick click, the yellow push button, and the potentiometer value. It sends these five values to Processing as a comma-separated line. Processing reads the information and uses it to control the drawing experience.
+The Arduino code reads the joystick's X and Y positions, the joystick click, the push button, and the potentiometer value. It sends these five values to Processing in one comma-separated line. Processing reads those values and uses them to control the drawing interface.
 
-One important part of my Processing code is how the joystick controls the drawing cursor:
+One part of my Processing code controls how the joystick moves the drawing cursor:
 
 ```java
 float speedX = map(joyX, 0, 4095, -6, 6);
@@ -115,39 +131,11 @@ penX = constrain(penX + speedX, 0, screenW - 1);
 penY = constrain(penY + speedY, 0, screenH - 1);
 ```
 
-This code maps the joystick readings into drawing movement on the screen. The dead zone prevents the cursor from drifting when the joystick is not being touched, and `constrain()` keeps the cursor within the drawing area.
+This code uses the joystick readings to control the cursor's movement. The dead zone keeps the cursor from moving when the joystick is not being touched, and `constrain()` keeps it inside the drawing area.
 
-I also used a PGraphics drawing layer to keep the lines visible as the interface updates. This allows the drawing to remain on the screen while the rest of the interface is redrawn.
+I also used a PGraphics layer in Processing so the lines stay on the screen while the rest of the interface updates.
 
-### Technical Challenges
-
-One challenge was getting all the physical components to communicate correctly with Processing. I had to troubleshoot the serial connection between the ESP32 and my Mac, as well as the potentiometer readings.
-
-Another challenge was making the brush sizes noticeably different. At first, the difference between the sizes was difficult to see, so I adjusted them to three sizes: 4, 7, and 10. I also added an on-screen indicator showing the selected brush size and color.
-
-Testing the project helped me understand how the different sensor inputs, serial communication, and Processing work together. I made adjustments to both the hardware and interface until the controls worked as expected.
-
-### Physical Setup
-
-The physical setup uses an ESP32 TTGO T-Display connected to a joystick, potentiometer, and two push-button controls. The joystick is used to move the drawing cursor and select brush sizes, while the potentiometer changes the drawing color. The separate yellow button clears the drawing screen.
-
-The components are connected through a breadboard, with the ESP32 communicating with the Processing application running on my Mac. This setup allows the physical controls to interact with the digital drawing interface.
-
-### AI Support Used
-
-I used ChatGPT (GPT-6) throughout this project for coding assistance and troubleshooting. It helped me better understand parts of my Arduino and Processing code, work through hardware and serial connection issues, and make improvements to the drawing interface.
-
-Some examples of prompts I used include:
-
-- "Why does my Mac show the cu.usbserial port as disconnected, even though my ESP32 was connecting and working before?"
-- "How can I make the different brush sizes in my Processing sketch more visible while keeping the drawing experience the same?"
-- "How can I add an indicator on the screen that displays the currently selected brush size and color without changing the original Etch A Sketch-inspired design?"
-
-I used ChatGPT to help me understand problems, explore possible solutions, and make improvements as I developed the project. I tested changes with my actual hardware and Processing sketch and adjusted the design based on what worked.
-
-### Visual Documentation
-
-<h4>Final Module 2 Project Video</h4>
+**Final Module 2 Project Video**
 
 <div class="project-video">
   <video autoplay muted loop playsinline controls>
@@ -156,30 +144,36 @@ I used ChatGPT to help me understand problems, explore possible solutions, and m
   </video>
 </div>
 
-<h4>Drawing Interface and Controls</h4>
+### Technical Challenges
 
-<div class="project-video">
-  <video autoplay muted loop playsinline controls>
-    <source src="Etch-a-sketch-demo.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>
+One challenge was getting the ESP32 and Processing to communicate correctly. I had to troubleshoot the serial connection between my ESP32 and Mac, along with some of the potentiometer readings.
 
-<h4>Changing Colors and Brush Sizes</h4>
+Another challenge was making the brush sizes easier to tell apart. At first, the differences were not very noticeable, so I adjusted them to three sizes: 4, 7, and 10. I also added an indicator to show the selected brush size and color.
 
-<div class="project-video">
-  <video autoplay muted loop playsinline controls>
-    <source src="Etch-a-sketch-colors-brush.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>
+I tested the controls and made changes to the code and interface until everything worked the way I wanted.
 
-<h4>Hardware Setup</h4>
+### Physical Setup
+
+The physical setup uses an ESP32 TTGO T-Display, joystick, potentiometer, yellow push button, breadboard, and jumper wires. The joystick moves the drawing cursor and changes the brush size when clicked. The potentiometer switches between colors, and the yellow button clears the drawing.
+
+The ESP32 connects to my Mac through USB and sends the control inputs to the Processing application. This allows the physical components to control the digital drawing interface.
+
+**Hardware Setup**
 
 <div class="project-media">
   <img src="https://raw.githubusercontent.com/Sanjidahjahan/fall2026-design-documentation/main/ESP32_breadboard.png" alt="ESP32 and breadboard hardware setup">
 </div>
 
+### AI Support Used
+
+I used ChatGPT (GPT-6) for coding assistance and troubleshooting during this project. It helped me understand parts of my Arduino and Processing code, work through hardware and serial connection issues, and make improvements to the drawing interface.
+
+Some examples of prompts I used were: "Why does my Mac show the cu.usbserial port as disconnected, even though my ESP32 was connecting and working before?" and "How can I make the different brush sizes in my Processing sketch more visible while keeping the drawing experience the same?"
+
+I also asked, "What code should I add to my original Processing sketch so the lines stay on the screen while the rest of the interface updates?" This helped me work with a PGraphics layer to keep the drawing visible as the interface updates.&#x20;
+
+I used the suggestions to troubleshoot and make changes, then tested the code and hardware to see what worked for my project.
+
 ### Project Repository
 
-[Click for Digital Etch A Sketch GitHub repository](https://github.com/Sanjidahjahan/digital-etch-a-sketch)
+[Click here to view the Digital Etch A Sketch GitHub repository](https://github.com/Sanjidahjahan/Digital-Etch-a-Sketch)
