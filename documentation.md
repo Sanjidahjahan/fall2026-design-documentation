@@ -20,7 +20,7 @@ title: Project Documentation
   </a>
 
   <a href="projects/digital-etch-a-sketch.html" class="project-card">
-    <img src="images/digital-etch-a-sketch/ESP32_breadboard.png" alt="Digital Etch A Sketch">
+    <img src="images/digital-etch-a-sketch/Etch-a-sketch-demo.gif" alt="Digital Etch A Sketch">
     <div class="project-card-content">
       <span class="project-number">02 / INTERACTIVE DESIGN</span>
       <h2>Digital Etch A Sketch</h2>
