@@ -118,14 +118,13 @@ We also had an issue with the screen flashing whenever a player pressed a button
 
 Here is a video showing two players playing Row the Boat:
 
-```html
 <div class="project-video">
   <video controls playsinline width="100%">
-    <source src="../video/row-the-boat/game-demo.mp4>
+    <source src="../video/row-the-boat/game-demo.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </div>
-```
+
 
 ### AI Support Used
 
