@@ -6,7 +6,6 @@ title: Project Documentation
 # Project Documentation
 
 <p class="intro-text">⋆⭒˚.⋆ This page holds my project documentation for Creative Embedded Systems this semester! ⋆⭒˚.⋆</p>
-
 ---
 
 ## My Projects
