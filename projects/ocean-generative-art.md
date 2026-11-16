@@ -32,7 +32,7 @@ The fish are controlled using arrays for their position, size, speed, direction,
 
 <div class="project-video">
   <video autoplay muted loop playsinline controls>
-    <source src="../video/demo.video.mp4" type="video/mp4">
+    <source src="../video/ocean-generative-art/demo.video.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </div>
@@ -50,15 +50,15 @@ The TFT display is placed behind a cutout in a paper envelope so that the screen
 <h4>Installation Photos</h4> 
 
 <div class="project-media">
-  <img src="https://raw.githubusercontent.com/Sanjidahjahan/Ocean-Generative-Art/main/images/installation-full.png" alt="Full installation">
+<img src="../images/ocean-generative-art/installation-full.png" alt="Full installation">
 </div>
 
 <div class="project-media">
-  <img src="https://raw.githubusercontent.com/Sanjidahjahan/Ocean-Generative-Art/main/images/installation-closeup.jpg" alt="Screen close-up">
+  <img src="../images/ocean-generative-art/installation-closeup.jpg" alt="Screen close-up">
 </div>
 
 <div class="project-media">
-  <img src="https://raw.githubusercontent.com/Sanjidahjahan/Ocean-Generative-Art/main/images/installation-wired.png" alt="Wired installation">
+  <img src="../images/ocean-generative-art/installation-wired.png" alt="Wired installation">
 </div>
 
 ### Project Repository
