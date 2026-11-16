@@ -27,7 +27,7 @@ The animation includes moving fish, bubbles, and a shark that causes the fish to
 
 ## Project 2: Digital Etch A Sketch
 
-![Digital Etch A Sketch hardware setup](images/digital-etch-a-sketch/ESP32_breadboard.png)
+![Digital Etch A Sketch animation](images/digital-etch-a-sketch/Etch-a-sketch-demo.gif)
 
 For my second project, I recreated the original Etch A Sketch with a digital twist. Using an ESP32, joystick, potentiometer, and physical button, I created an interactive drawing interface in Processing.
 
