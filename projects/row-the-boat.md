@@ -121,7 +121,7 @@ Here is a video showing two players playing Row the Boat:
 ```html
 <div class="project-video">
   <video controls playsinline width="100%">
-    <source src="../video/game-demo.mp4" type="video/mp4">
+    <source src="../video/row-the-boat/game-demo.mp4>
     Your browser does not support the video tag.
   </video>
 </div>
