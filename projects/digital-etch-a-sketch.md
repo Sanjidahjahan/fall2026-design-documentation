@@ -19,7 +19,7 @@ One of my main design decisions was keeping the familiar look of the original Et
 
 <div class="project-video">
   <video autoplay muted loop playsinline controls>
-    <source src="../Etch-a-sketch-demo.mp4" type="video/mp4">
+    <source src="../video/digital-etch-a-sketch/Etch-a-sketch-demo.mp4">
     Your browser does not support the video tag.
   </video>
 </div>
@@ -32,7 +32,7 @@ I also added an indicator on the screen to show the selected brush size and colo
 
 <div class="project-video">
   <video autoplay muted loop playsinline controls>
-    <source src="../Etch-a-sketch-colors-brush.mp4" type="video/mp4">
+    <source src="../video/digital-etch-a-sketch/Etch-a-sketch-colors-brush.mp4">
     Your browser does not support the video tag.
   </video>
 </div>
@@ -64,7 +64,7 @@ I also used a PGraphics layer in Processing so the lines stay on the screen whil
 
 <div class="project-video">
   <video autoplay muted loop playsinline controls>
-    <source src="../ESP32_demo.mp4" type="video/mp4">
+    <source src="../video/digital-etch-a-sketch/ESP32_demo.mp4">
     Your browser does not support the video tag.
   </video>
 </div>
@@ -86,7 +86,7 @@ The ESP32 connects to my Mac through USB and sends the control inputs to the Pro
 <h4>Hardware Setup</h4>
 
 <div class="project-media">
-  <img src="https://raw.githubusercontent.com/Sanjidahjahan/fall2026-design-documentation/main/ESP32_breadboard.png" alt="ESP32 and breadboard hardware setup">
+  <img src="../images/digital-etch-a-sketch/ESP32_breadboard.png" alt="ESP32 and breadboard hardware setup">
 </div>
 
 ### AI Support Used
