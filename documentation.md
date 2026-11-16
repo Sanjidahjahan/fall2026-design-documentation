@@ -9,9 +9,9 @@ title: Project Documentation
 
 ---
 
-# My Projects
+## My Projects
 
-## Project 1: Ocean Generative Art
+### Project 1: Ocean Generative Art
 
 ![Ocean Generative Art animation](images/ocean-generative-art/demo.gif)
 
@@ -25,7 +25,7 @@ The animation includes moving fish, bubbles, and a shark that causes the fish to
 
 ---
 
-## Project 2: Digital Etch A Sketch
+### Project 2: Digital Etch A Sketch
 
 ![Digital Etch A Sketch animation](images/digital-etch-a-sketch/Etch-a-sketch-demo.gif)
 
@@ -39,7 +39,7 @@ Users can move the drawing cursor, change brush sizes, switch between colors, an
 
 ---
 
-## Project 3: Row the Boat
+### Project 3: Row the Boat
 
 ![Row the Boat gameplay animation](images/row-the-boat/game-demo.gif)
 
