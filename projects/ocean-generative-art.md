@@ -50,7 +50,7 @@ The TFT display is placed behind a cutout in a paper envelope so that the screen
 <h4>Installation Photos</h4> 
 
 <div class="project-media">
-<img src="../images/ocean-generative-art/installation-full.png" alt="Full installation">
+<img src="../images/ocean-generative-art/installation-full.jpg" alt="Full installation">
 </div>
 
 <div class="project-media">
@@ -58,7 +58,7 @@ The TFT display is placed behind a cutout in a paper envelope so that the screen
 </div>
 
 <div class="project-media">
-  <img src="../images/ocean-generative-art/installation-wired.png" alt="Wired installation">
+  <img src="../images/ocean-generative-art/installation-wired.jpg" alt="Wired installation">
 </div>
 
 ### Project Repository
