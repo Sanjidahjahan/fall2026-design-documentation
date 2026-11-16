@@ -116,6 +116,7 @@ If the drift reaches its limit, the boat capsizes and the round ends:
 
 We also had an issue with the screen flashing whenever a player pressed a button. At first, the display was being refreshed too much during gameplay. We changed the drawing logic to use needsRedraw to keep track of when the screen needed to be updated. Instead of refreshing the entire screen, we selectively redrew only the parts that changed, such as the boat, water, and game information. This made the movement look smoother and removed the flashing during button presses.
 
+
 Here is a video showing two players playing Row the Boat:
 
 <div class="project-video">
