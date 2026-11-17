@@ -923,19 +923,14 @@ code {
   display: block;
   width: 100%;
   height: 210px;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
-  padding: 0;
+  padding: 18px 28px;
   margin: 0;
   border-radius: 0;
   opacity: 1;
   background: transparent;
   transition: transform 0.35s ease;
-}
-
-/* Zoom in on Ocean Generative Art */
-.project-card:nth-child(1) img {
-  transform: scale(1.8);
 }
 
 .project-card:hover img {
