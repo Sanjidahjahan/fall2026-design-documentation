@@ -3,6 +3,8 @@ layout: default
 title: Row the Boat
 ---
 
+## Project 3: Row the Boat
+
 ### Artistic Vision
 
 For this project, we wanted to create a two-player cooperative game where both players had to work together to reach the finish line. We came up with the idea of rowing a boat across a lake, inspired by the coordination needed in a three-legged race.
@@ -19,11 +21,14 @@ For the visual design, we wanted players to understand what was happening on the
 
 We also added different messages for each game outcome, including "You made it!", "Time's up!", and "Uh oh, try again!" This makes it easier for players to understand when they win, run out of time, or capsize.
 
-The starting screen introduces the game before players begin:
+
+**The starting screen introduces the game before players begin:**
 ![Row the Boat starting screen](../images/row-the-boat/starting-screen.jpg)
 
-During gameplay, players can see the boat, water, and progress bar as they work together to reach the finish line:
+
+**During gameplay, players can see the boat, water, and progress bar as they work together to reach the finish line:**
 ![Row the Boat gameplay](../images/row-the-boat/gameplay.jpg)
+
 
 **My Role:** I mainly handled Player 1's ESP32, which acted as the host and controlled the main game logic. This included processing button presses, tracking the boat's progress and drift, managing the timer, and keeping both boards updated. I also focused on the screen animations and making the gameplay run smoothly.
 
@@ -104,11 +109,14 @@ One of our main challenges was getting both ESP32 boards to communicate correctl
 
 Another challenge was getting the alternating button and drift mechanics to work the way we wanted. We had to test different button sequences to make sure the boat moved forward when players took turns, drifted when they pressed out of order, and capsized when the drift reached its limit.
 
-This image shows what happens when players press out of order, and the boat starts drifting:
+
+**This image shows what happens when players press out of order, and the boat starts drifting:**
 ![Row the Boat drift](../images/row-the-boat/drift.jpg)
 
-If the drift reaches its limit, the boat capsizes and the round ends:
+
+**If the drift reaches its limit, the boat capsizes and the round ends:**
 ![Row the Boat game over](../images/row-the-boat/game-over.jpg)
+
 
 We also had an issue with the screen flashing whenever a player pressed a button. At first, the display was being refreshed too much during gameplay. We changed the drawing logic to use needsRedraw to keep track of when the screen needed to be updated. Instead of refreshing the entire screen, we selectively redrew only the parts that changed, such as the boat, water, and game information. This made the movement look smoother and removed the flashing during button presses.
 
