@@ -2,8 +2,8 @@
 layout: default
 title: Project Documentation
 ---
-
 # Project Documentation
+
 
 <p class="intro-text"> A collection of projects exploring physical computing, interaction design, and creative technology. </p>
 
