@@ -10,7 +10,7 @@ title: Project Documentation
 <div class="project-grid">
 
   <a href="projects/ocean-generative-art.html" class="project-card">
-    <img src="images/ocean-generative-art/demo.gif" alt="Ocean Generative Art">
+    <img src="images/projects-card/democard1.gif" alt="Ocean Generative Art">
     <div class="project-card-content">
       <span class="project-number">01 / CREATIVE COMPUTING</span>
       <h2>Ocean Generative Art</h2>
@@ -20,7 +20,7 @@ title: Project Documentation
   </a>
 
   <a href="projects/digital-etch-a-sketch.html" class="project-card">
-    <img src="images/digital-etch-a-sketch/Etch-a-sketch-demo.gif" alt="Digital Etch A Sketch">
+    <img src="images/projects-card/democard2.gif" alt="Digital Etch A Sketch">
     <div class="project-card-content">
       <span class="project-number">02 / INTERACTIVE DESIGN</span>
       <h2>Digital Etch A Sketch</h2>
@@ -30,7 +30,7 @@ title: Project Documentation
   </a>
 
   <a href="projects/row-the-boat.html" class="project-card">
-    <img src="images/row-the-boat/game-demo.gif" alt="Row the Boat">
+    <img src="images/projects-card/democard3.gif" alt="Row the Boat">
     <div class="project-card-content">
       <span class="project-number">03 / DISTRIBUTED COMMUNICATION</span>
       <h2>Row the Boat</h2>
