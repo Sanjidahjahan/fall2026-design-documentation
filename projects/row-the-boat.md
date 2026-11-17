@@ -120,7 +120,7 @@ We also had an issue with the screen flashing whenever a player pressed a button
 <h4>Final Module 3 Project Video</h4>
 
 <div class="project-video">
-  <video autoplay muted loop playsinline controls>
+  <video autoplay muted loop playsinline>
     <source src="../video/row-the-boat/game-demo.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
