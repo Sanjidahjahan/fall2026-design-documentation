@@ -982,16 +982,6 @@ code {
   line-height: 1.6;
 }
 
-/* Small creator credit */
-
-.project-credit {
-  display: block;
-  color: #81778B;
-  font-size: 11px;
-  line-height: 1.5;
-  margin: 0 auto 15px;
-}
-
 /* Explore Project link */
 
 .project-link {
