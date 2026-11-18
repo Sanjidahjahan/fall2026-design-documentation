@@ -9,7 +9,28 @@
   <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 </head>
 
-<body class="page-{{ page.title | slugify }}">
+{% assign project_page = false %}
+{% assign next_project_url = '' %}
+{% assign next_project_title = '' %}
+
+{% case page.url %}
+  {% when '/projects/ocean-generative-art.html' %}
+    {% assign project_page = true %}
+    {% assign next_project_url = '/projects/digital-etch-a-sketch.html' %}
+    {% assign next_project_title = 'Digital Etch A Sketch' %}
+
+  {% when '/projects/digital-etch-a-sketch.html' %}
+    {% assign project_page = true %}
+    {% assign next_project_url = '/projects/row-the-boat.html' %}
+    {% assign next_project_title = 'Row the Boat' %}
+
+  {% when '/projects/row-the-boat.html' %}
+    {% assign project_page = true %}
+    {% assign next_project_url = '/projects/ocean-generative-art.html' %}
+    {% assign next_project_title = 'Ocean Generative Art' %}
+{% endcase %}
+
+<body class="page-{{ page.title | slugify }}{% if project_page %} project-detail-page{% endif %}">
 
   <nav>
     <a href="{{ '/' | relative_url }}">Home</a>
@@ -20,7 +41,23 @@
   </nav>
 
   <main>
+
+    {% if project_page %}
+      <a class="project-back-link" href="{{ '/documentation.html' | relative_url }}">
+        ← All Projects
+      </a>
+    {% endif %}
+
     {{ content }}
+
+    {% if project_page %}
+      <div class="project-page-navigation">
+        <a href="{{ next_project_url | relative_url }}">
+          Next Project: {{ next_project_title }} →
+        </a>
+      </div>
+    {% endif %}
+
   </main>
 
   <footer>
