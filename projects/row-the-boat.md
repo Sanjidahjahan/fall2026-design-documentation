@@ -32,7 +32,7 @@ We also added different messages for each game outcome, including "You made it!"
 
 **My Role:** I mainly handled Player 1's ESP32, which acted as the host and controlled the main game logic. This included processing button presses, tracking the boat's progress and drift, managing the timer, and keeping both boards updated. I also focused on the screen animations and making the gameplay run smoothly.
 
-**Nicole's Role:** Nicole mainly handled Player 2's ESP32 and its wireless communication with the host. This involved sending button presses through ESP-NOW and receiving game updates so both screens stayed synchronized. She also helped test the connection between the boards and make sure everything worked correctly during gameplay.
+**My Teammate Nicole's Role:** Nicole mainly handled Player 2's ESP32 and its wireless communication with the host. This involved sending button presses through ESP-NOW and receiving game updates so both screens stayed synchronized. She also helped test the connection between the boards and make sure everything worked correctly during gameplay.
 
 **Shared Design Decisions:** We worked together on the overall game concept, alternating button mechanic, drift and capsizing system, and visual style. We also tested the game together and made adjustments based on how it felt to play.
 
