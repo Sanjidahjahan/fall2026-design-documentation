@@ -63,5 +63,3 @@ The TFT display is placed behind a cutout in a paper envelope so that the screen
 ### Project Repository
 
 [Click for Ocean Generative Art GitHub repository](https://github.com/Sanjidahjahan/Ocean-Generative-Art)
-
----
