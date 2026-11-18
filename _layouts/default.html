@@ -10,10 +10,13 @@
 </head>
 
 {% assign project_page = false %}
+{% assign previous_project_url = '' %}
+{% assign previous_project_title = '' %}
 {% assign next_project_url = '' %}
 {% assign next_project_title = '' %}
 
 {% case page.url %}
+
   {% when '/projects/ocean-generative-art.html' %}
     {% assign project_page = true %}
     {% assign next_project_url = '/projects/digital-etch-a-sketch.html' %}
@@ -21,13 +24,16 @@
 
   {% when '/projects/digital-etch-a-sketch.html' %}
     {% assign project_page = true %}
+    {% assign previous_project_url = '/projects/ocean-generative-art.html' %}
+    {% assign previous_project_title = 'Ocean Generative Art' %}
     {% assign next_project_url = '/projects/row-the-boat.html' %}
     {% assign next_project_title = 'Row the Boat' %}
 
   {% when '/projects/row-the-boat.html' %}
     {% assign project_page = true %}
-    {% assign next_project_url = '/projects/ocean-generative-art.html' %}
-    {% assign next_project_title = 'Ocean Generative Art' %}
+    {% assign previous_project_url = '/projects/digital-etch-a-sketch.html' %}
+    {% assign previous_project_title = 'Digital Etch A Sketch' %}
+
 {% endcase %}
 
 <body class="page-{{ page.title | slugify }}{% if project_page %} project-detail-page{% endif %}">
@@ -52,9 +58,23 @@
 
     {% if project_page %}
       <div class="project-page-navigation">
-        <a href="{{ next_project_url | relative_url }}">
-          Next Project: {{ next_project_title }} →
-        </a>
+
+        {% if previous_project_url != '' %}
+          <a class="previous-project" href="{{ previous_project_url | relative_url }}">
+            ← {{ previous_project_title }}
+          </a>
+        {% else %}
+          <span></span>
+        {% endif %}
+
+        {% if next_project_url != '' %}
+          <a class="next-project" href="{{ next_project_url | relative_url }}">
+            {{ next_project_title }} →
+          </a>
+        {% else %}
+          <span></span>
+        {% endif %}
+
       </div>
     {% endif %}
 
