@@ -115,6 +115,21 @@ body {
     #FDFBD4;
 }
 
+/* =========================================
+   INDIVIDUAL PROJECT BACKGROUNDS
+   ========================================= */
+
+.page-ocean-generative-art {
+  background: linear-gradient(145deg, #F0E9FA, #FFF9E9);
+}
+
+.page-digital-etch-a-sketch {
+  background: linear-gradient(145deg, #FCE9E5, #FFF8E8);
+}
+
+.page-row-the-boat {
+  background: linear-gradient(145deg, #E5F0F5, #F5EDFA);
+}
 
 /* =========================================
    NAVIGATION
