@@ -145,3 +145,4 @@ We used the explanations to better understand the code and make our own adjustme
 ### Project Repository
 
 [Click here to view the Row the Boat GitHub repository](https://github.com/Sanjidahjahan/Row-the-boat)
+[Click here to view Nicole's blog post](https://sweet-pen-2cc.notion.site/Module-3-Row-The-Boat-41c260a097a78034a215e31531058c60)
